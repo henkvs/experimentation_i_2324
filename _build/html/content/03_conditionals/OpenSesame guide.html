@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Introduction &#8212; Experimentation 1</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,1108 +62,604 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/03_conditionals/OpenSesame guide';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
         
       
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Experimentation 1</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Experimentation 1 - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Experimentation 1 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Programming Psychological Experiments using python and OpenSesame (academic year 2022-2023)
+                    Programming Psychological Experiments using python and OpenSesame (academic year 2023-2024)
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../01_getting_ready/gettingready_intro.html">
-   Chapter 1 - Getting Ready
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01_getting_ready/gettingready_software.html">
-     OpenSesame, Anaconda and using this website
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01_getting_ready/gettingready_python_lessons.html">
-     Python lessons: Getting Ready
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01_getting_ready/gettingready_python_exercises.html">
-     Python exercises: Getting Ready
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../02_variables/variables_intro.html">
-   Chapter 2 - Variables
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02_variables/variables_python_lessons.html">
-     Python lessons: Variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02_variables/variables_python_exercises.html">
-     Python exercises: Variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02_variables/gaze_cuing.html">
-     Gaze cuing task in OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="conditionals_intro.html">
-   Chapter 3 - Conditionals
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="conditionals_python_lessons.html">
-     Python lessons: Conditionals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="conditionals_python_exercises.html">
-     Python exercises: Conditionals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="conflict_tasks.html">
-     Stroop, flanker, and go-nogo tasks in OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../04_functions/functions_intro.html">
-   Chapter 4 - Functions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04_functions/functions_python_lessons.html">
-     Python lessons: Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04_functions/functions_python_exercises.html">
-     Python exercises: Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04_functions/wcst.html">
-     The Wisconsin Card Sorting Task in OpenSesame
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04_functions/ultimatumgame/UltimatumGame.html">
-     The Ultimatum Game in OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../05_loops/loops_intro.html">
-   Chapter 5 - Loops
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../05_loops/loops_python_lessons.html">
-     Python lessons: Loops
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../05_loops/loops_python_exercises.html">
-     Python exercises: Loops
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../05_loops/cyberball/Cyberball.html">
-     The Cyberball game in OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../06_strings/strings_intro.html">
-   Chapter 6 - Strings
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../06_strings/strings_python_lessons.html">
-     Python lessons: Strings
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../06_strings/strings_python_exercises.html">
-     Python exercises: Strings
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../06_strings/digitspan/digitspan.html">
-     Memory Span Task in OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../07_files/files_intro.html">
-   Chapter 7 - Files
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../07_files/files_python_lessons.html">
-     Python lessons: Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../07_files/files_python_exercises.html">
-     Python exercises: Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../07_files/merging_files.html">
-     Merging logfiles OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../08_lists/lists_intro.html">
-   Chapter 8 - Lists
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_lists/lists_python_lessons.html">
-     Python lessons: Lists
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_lists/lists_python_exercises.html">
-     Python exercises: Lists
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_lists/visual_search.html">
-     Visual Search paradigm in OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../09_numbers/numbers_intro.html">
-   Chapter 9 - Numbers and arrays
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../09_numbers/numbers_python_lessons.html">
-     Python lessons: Numbers and arrays
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../09_numbers/numbers_python_exercises.html">
-     Python exercises: Numbers and arrays
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../09_numbers/attentional_blink.html">
-     Attentional Blink paradigm in OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../10_dataframes/dataframes_intro.html">
-   Chapter 10 - Dataframes
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../10_dataframes/dataframes_python_lessons.html">
-     Python lessons: Dataframes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../10_dataframes/dataframes_python_exercises.html">
-     Python exercises: Dataframes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../10_dataframes/datawrangling.html">
-     Wrangling behavorial data generated by OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../11_plotting/plotting_intro.html">
-   Chapter 11 - Plotting
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../11_plotting/plotting_python_lessons.html">
-     Python lessons: Plotting
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../11_plotting/plotting_python_exercises.html">
-     Python exercises: Plotting
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../11_plotting/plotting_behavioral_data.html">
-     Plotting behavorial data generated by OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../12_ques/ques_intro.html">
-   Chapter 12 - Canvas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../12_ques/ques_python_lessons.html">
-     Python lessons: Canvas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../12_ques/ques_python_exercises.html">
-     Python exercises: Canvas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../12_ques/questionnaires/questionnaire.html">
-     Questionnaires in OpenSesame
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../13_input_output/io_intro.html">
-   Chapter 13 - Using the parallel port
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../13_input_output/io_python_lessons.html">
-     Lessons: How to send markers using the parallel port
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../13_input_output/io_python_exercises.html">
-     Python exercises: Decimal versus binary notation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../13_input_output/parallelport.html">
-     Using the parallel port in OpenSesame to send markers
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../solutions_book/solutions.html">
-   Solutions
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01_getting_ready/gettingready_intro.html">Chapter 1 - Getting Ready</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01_getting_ready/gettingready_software.html">OpenSesame, Anaconda and using this website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_getting_ready/gettingready_python_lessons.html">Python lessons: Getting Ready</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_getting_ready/gettingready_python_exercises.html">Python exercises: Getting Ready</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_variables/variables_intro.html">Chapter 2 - Variables</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_variables/variables_python_lessons.html">Python lessons: Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_variables/variables_python_exercises.html">Python exercises: Variables</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../02_variables/gaze_cuing.html">Gaze cuing task in OpenSesame</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="conditionals_intro.html">Chapter 3 - Conditionals</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="conditionals_python_lessons.html">Python lessons: Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditionals_python_exercises.html">Python exercises: Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conflict_tasks.html">Stroop, flanker, and go-nogo tasks in OpenSesame</a></li>
+
+
+
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04_functions/functions_intro.html">Chapter 4 - Functions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../04_functions/functions_python_lessons.html">Python lessons: Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_functions/functions_python_exercises.html">Python exercises: Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_functions/wcst.html">The Wisconsin Card Sorting Task in OpenSesame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_functions/ultimatumgame/UltimatumGame.html">The Ultimatum Game in OpenSesame</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05_loops/loops_intro.html">Chapter 5 - Loops</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../05_loops/loops_python_lessons.html">Python lessons: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_loops/loops_python_exercises.html">Python exercises: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_loops/cyberball/Cyberball.html">The Cyberball game in OpenSesame</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_strings/strings_intro.html">Chapter 6 - Strings</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_strings/strings_python_lessons.html">Python lessons: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_strings/strings_python_exercises.html">Python exercises: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_strings/digitspan/digitspan.html">Memory Span Task in OpenSesame</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07_files/files_intro.html">Chapter 7 - Files</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../07_files/files_python_lessons.html">Python lessons: Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_files/files_python_exercises.html">Python exercises: Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_files/merging_files.html">Merging logfiles OpenSesame</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08_lists/lists_intro.html">Chapter 8 - Lists</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../08_lists/lists_python_lessons.html">Python lessons: Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_lists/lists_python_exercises.html">Python exercises: Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_lists/visual_search.html">Visual Search paradigm in OpenSesame</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09_numbers/numbers_intro.html">Chapter 9 - Numbers and arrays</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../09_numbers/numbers_python_lessons.html">Python lessons: Numbers and arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_numbers/numbers_python_exercises.html">Python exercises: Numbers and arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_numbers/attentional_blink.html">Attentional Blink paradigm in OpenSesame</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10_dataframes/dataframes_intro.html">Chapter 10 - Dataframes</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../10_dataframes/dataframes_python_lessons.html">Python lessons: Dataframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10_dataframes/dataframes_python_exercises.html">Python exercises: Dataframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10_dataframes/datawrangling.html">Wrangling behavorial data generated by OpenSesame</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11_plotting/plotting_intro.html">Chapter 11 - Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../11_plotting/plotting_python_lessons.html">Python lessons: Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11_plotting/plotting_python_exercises.html">Python exercises: Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11_plotting/plotting_behavioral_data.html">Plotting behavorial data generated by OpenSesame</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12_ques/ques_intro.html">Chapter 12 - Canvas</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../12_ques/ques_python_lessons.html">Python lessons: Canvas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_ques/ques_python_exercises.html">Python exercises: Canvas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_ques/questionnaires/questionnaire.html">Questionnaires in OpenSesame</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../13_input_output/io_intro.html">Chapter 13 - Using the parallel port</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../13_input_output/io_python_lessons.html">Lessons: How to send markers using the parallel port</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_input_output/io_python_exercises.html">Python exercises: Decimal versus binary notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_input_output/parallelport.html">Using the parallel port in OpenSesame to send markers</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../solutions_book/solutions.html">Solutions</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/henkvs/experimentation_i_2324/main?urlpath=tree/content/03_conditionals/OpenSesame guide.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/henkvs/experimentation_i_2324/blob/main/content/03_conditionals/OpenSesame guide.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/henkvs/experimentation_i_2324" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/henkvs/experimentation_i_2324/edit/main/content/03_conditionals/OpenSesame guide.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/henkvs/experimentation_i_2324/issues/new?title=Issue%20on%20page%20%2Fcontent/03_conditionals/OpenSesame guide.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/03_conditionals/OpenSesame guide.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/JeshuaT/Experimentation1"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/JeshuaT/Experimentation1/issues/new?title=Issue%20on%20page%20%2Fcontent/03_conditionals/OpenSesame guide.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/JeshuaT/Experimentation1/edit/main/content/03_conditionals/OpenSesame guide.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/content/03_conditionals/OpenSesame guide.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#why-opensesame">
-     Why OpenSesame?
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-to-get-started">
-     How to get started
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resources">
-     Resources
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#this-guide">
-     This guide
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-one-stroop-task">
-   Task one: Stroop task
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-the-stroop-task">
-     Creating the Stroop task
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-a-new-experiment">
-       Creating a new experiment
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-building-blocks-of-creating-an-experiment">
-       The building blocks of creating an experiment
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-fixation-dot">
-       Creating the fixation dot
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-word-component">
-       Creating the word component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-keyboard-response-component">
-       Creating the keyboard response component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-a-blank-screen">
-       Creating a blank screen
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-logger-component">
-       Creating the logger component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-end-of-experiment-screen">
-       Creating the end of experiment screen
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modifying-the-welcome-message">
-       Modifying the welcome message
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#time-to-test-the-experiment">
-       Time to test the experiment
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#manipulating-the-presentation-of-word-and-colour">
-       Manipulating the presentation of word and colour
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#editing-the-block-loop-component">
-       Editing the block_loop component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#editing-the-word-component">
-       Editing the word component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#editing-keyboard-response">
-       Editing keyboard_response
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#test-the-experiment">
-       Test the experiment
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#increase-the-number-of-trials">
-       Increase the number of trials
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-experiment-full-screen">
-       Run the experiment full screen
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analysing-response-time-data-from-the-stroop-task">
-     Analysing response time data from the Stroop task
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#importing-the-data-in-spss-version-23">
-       Importing the data in SPSS version 23
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#importing-the-data-in-spss-version-25">
-       Importing the data in SPSS version 25
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#processing-the-data">
-       Processing the data
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#identifying-extreme-responses">
-       Identifying extreme responses
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#filtering-out-extreme-and-incorrect-responses">
-       Filtering out extreme and incorrect responses
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#getting-the-outcome-variable">
-       Getting the outcome variable
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-two-eriksen-flanker-task">
-   Task two: Eriksen Flanker task
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-do-you-recreate-a-psychology-experiment">
-     How do you recreate a psychology experiment?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tips-for-debugging-experiments">
-   Tips for Debugging Experiments
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#steps-to-take-when-debugging">
-     Steps to take when debugging
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#asking-for-help">
-     Asking for help
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#glossary">
-   Glossary
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#why-opensesame">
-     Why OpenSesame?
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-to-get-started">
-     How to get started
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resources">
-     Resources
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#this-guide">
-     This guide
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-one-stroop-task">
-   Task one: Stroop task
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-the-stroop-task">
-     Creating the Stroop task
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-a-new-experiment">
-       Creating a new experiment
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-building-blocks-of-creating-an-experiment">
-       The building blocks of creating an experiment
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-fixation-dot">
-       Creating the fixation dot
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-word-component">
-       Creating the word component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-keyboard-response-component">
-       Creating the keyboard response component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-a-blank-screen">
-       Creating a blank screen
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-logger-component">
-       Creating the logger component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-the-end-of-experiment-screen">
-       Creating the end of experiment screen
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modifying-the-welcome-message">
-       Modifying the welcome message
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#time-to-test-the-experiment">
-       Time to test the experiment
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#manipulating-the-presentation-of-word-and-colour">
-       Manipulating the presentation of word and colour
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#editing-the-block-loop-component">
-       Editing the block_loop component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#editing-the-word-component">
-       Editing the word component
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#editing-keyboard-response">
-       Editing keyboard_response
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#test-the-experiment">
-       Test the experiment
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#increase-the-number-of-trials">
-       Increase the number of trials
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#run-the-experiment-full-screen">
-       Run the experiment full screen
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analysing-response-time-data-from-the-stroop-task">
-     Analysing response time data from the Stroop task
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#importing-the-data-in-spss-version-23">
-       Importing the data in SPSS version 23
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#importing-the-data-in-spss-version-25">
-       Importing the data in SPSS version 25
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#processing-the-data">
-       Processing the data
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#identifying-extreme-responses">
-       Identifying extreme responses
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#filtering-out-extreme-and-incorrect-responses">
-       Filtering out extreme and incorrect responses
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#getting-the-outcome-variable">
-       Getting the outcome variable
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-two-eriksen-flanker-task">
-   Task two: Eriksen Flanker task
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-do-you-recreate-a-psychology-experiment">
-     How do you recreate a psychology experiment?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tips-for-debugging-experiments">
-   Tips for Debugging Experiments
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#steps-to-take-when-debugging">
-     Steps to take when debugging
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#asking-for-help">
-     Asking for help
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#glossary">
-   Glossary
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-opensesame">Why OpenSesame?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-get-started">How to get started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-guide">This guide</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-one-stroop-task">Task one: Stroop task</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-stroop-task">Creating the Stroop task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-experiment">Creating a new experiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-building-blocks-of-creating-an-experiment">The building blocks of creating an experiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-fixation-dot">Creating the fixation dot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-word-component">Creating the word component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-keyboard-response-component">Creating the keyboard response component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-blank-screen">Creating a blank screen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-logger-component">Creating the logger component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-end-of-experiment-screen">Creating the end of experiment screen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-the-welcome-message">Modifying the welcome message</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-to-test-the-experiment">Time to test the experiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-the-presentation-of-word-and-colour">Manipulating the presentation of word and colour</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-the-block-loop-component">Editing the block_loop component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-the-word-component">Editing the word component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-keyboard-response">Editing keyboard_response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-the-experiment">Test the experiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increase-the-number-of-trials">Increase the number of trials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-experiment-full-screen">Run the experiment full screen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysing-response-time-data-from-the-stroop-task">Analysing response time data from the Stroop task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-the-data-in-spss-version-23">Importing the data in SPSS version 23</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-the-data-in-spss-version-25">Importing the data in SPSS version 25</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-the-data">Processing the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identifying-extreme-responses">Identifying extreme responses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-out-extreme-and-incorrect-responses">Filtering out extreme and incorrect responses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-outcome-variable">Getting the outcome variable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-two-eriksen-flanker-task">Task two: Eriksen Flanker task</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-you-recreate-a-psychology-experiment">How do you recreate a psychology experiment?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-debugging-experiments">Tips for Debugging Experiments</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-take-when-debugging">Steps to take when debugging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asking-for-help">Asking for help</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary">Glossary</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <p>James Bartlett</p>
 <p>University of Glasgow, United Kingdom (<a class="reference external" href="mailto:james&#46;bartlett&#37;&#52;&#48;glasgow&#46;ac&#46;uk">james<span>&#46;</span>bartlett<span>&#64;</span>glasgow<span>&#46;</span>ac<span>&#46;</span>uk</a>)</p>
-<p><a class="reference external" href="#introduction"><span class="underline">Introduction</span></a></p>
+<p><span class="xref myst"><span class="underline">Introduction</span></span></p>
 <blockquote>
-<div><p><a class="reference external" href="#why-opensesame"><span class="underline">Why OpenSesame?</span></a></p>
-<p><a class="reference external" href="#how-to-get-started"><span class="underline">How to get
-started</span></a></p>
-<p><a class="reference external" href="#resources"><span class="underline">Resources</span></a></p>
-<p><a class="reference external" href="#this-guide"><span class="underline">This guide</span></a></p>
+<div><p><span class="xref myst"><span class="underline">Why OpenSesame?</span></span></p>
+<p><span class="xref myst"><span class="underline">How to get
+started</span></span></p>
+<p><span class="xref myst"><span class="underline">Resources</span></span></p>
+<p><span class="xref myst"><span class="underline">This guide</span></span></p>
 </div></blockquote>
-<p><a class="reference external" href="#task-one-stroop-task"><span class="underline">Task one: Stroop
-task</span></a></p>
+<p><span class="xref myst"><span class="underline">Task one: Stroop
+task</span></span></p>
 <blockquote>
-<div><p><a class="reference external" href="#creating-the-stroop-task"><span class="underline">Creating the Stroop
-task</span></a></p>
-<p><a class="reference external" href="#analysing-response-time-data-from-the-stroop-task"><span class="underline">Analysing response time data from the Stroop
-task</span></a></p>
+<div><p><span class="xref myst"><span class="underline">Creating the Stroop
+task</span></span></p>
+<p><span class="xref myst"><span class="underline">Analysing response time data from the Stroop
+task</span></span></p>
 </div></blockquote>
-<p><a class="reference external" href="#task-two-eriksen-flanker-task"><span class="underline">Task two: Eriksen Flanker
-task</span></a></p>
+<p><span class="xref myst"><span class="underline">Task two: Eriksen Flanker
+task</span></span></p>
 <blockquote>
-<div><p><a class="reference external" href="#how-do-you-recreate-a-psychology-experiment"><span class="underline">How do you recreate a psychology
-experiment?</span></a></p>
-<p><a class="reference external" href="#creating-the-eriksen-flanker-task-in-opensesame"><span class="underline">Creating the Eriksen Flanker Task in
-OpenSesame</span></a></p>
-<p><a class="reference external" href="#analysing-response-time-data-from-the-eriksen-flanker-task"><span class="underline">Analysing response time data from the Eriksen
+<div><p><span class="xref myst"><span class="underline">How do you recreate a psychology
+experiment?</span></span></p>
+<p><span class="xref myst"><span class="underline">Creating the Eriksen Flanker Task in
+OpenSesame</span></span></p>
+<p><span class="xref myst"><span class="underline">Analysing response time data from the Eriksen
 Flanker
-task</span></a></p>
+task</span></span></p>
 </div></blockquote>
-<p><a class="reference external" href="#task-three-go-nogo-task-with-images"><span class="underline">Task three: Go-NoGo task with
-images</span></a></p>
+<p><span class="xref myst"><span class="underline">Task three: Go-NoGo task with
+images</span></span></p>
 <blockquote>
-<div><p><a class="reference external" href="#recreating-the-go-nogo-task"><span class="underline">Recreating the Go-NoGo
-task</span></a></p>
-<p><a class="reference external" href="#creating-the-task-in-opensesame"><span class="underline">Creating the task in
-OpenSesame</span></a></p>
-<p><a class="reference external" href="#analysing-the-data-from-the-task"><span class="underline">Analysing the data from the
-task</span></a></p>
+<div><p><span class="xref myst"><span class="underline">Recreating the Go-NoGo
+task</span></span></p>
+<p><span class="xref myst"><span class="underline">Creating the task in
+OpenSesame</span></span></p>
+<p><span class="xref myst"><span class="underline">Analysing the data from the
+task</span></span></p>
 </div></blockquote>
-<p><a class="reference external" href="#tips-for-debugging-experiments"><span class="underline">Tips for Debugging
-Experiments</span></a></p>
+<p><span class="xref myst"><span class="underline">Tips for Debugging
+Experiments</span></span></p>
 <blockquote>
-<div><p><a class="reference external" href="#steps-to-take-when-debugging"><span class="underline">Steps to take when
-debugging</span></a></p>
-<p><a class="reference external" href="#asking-for-help"><span class="underline">Asking for help</span></a></p>
+<div><p><span class="xref myst"><span class="underline">Steps to take when
+debugging</span></span></p>
+<p><span class="xref myst"><span class="underline">Asking for help</span></span></p>
 </div></blockquote>
-<p><a class="reference external" href="#glossary"><span class="underline">Glossary</span></a></p>
-<p><a class="reference external" href="#references"><span class="underline">References</span></a></p>
+<p><span class="xref myst"><span class="underline">Glossary</span></span></p>
+<p><span class="xref myst"><span class="underline">References</span></span></p>
 <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <section id="why-opensesame">
-<h2>Why OpenSesame?<a class="headerlink" href="#why-opensesame" title="Permalink to this headline">#</a></h2>
+<h2>Why OpenSesame?<a class="headerlink" href="#why-opensesame" title="Permalink to this heading">#</a></h2>
 <p>OpenSesame <a class="reference external" href="https://www.zotero.org/google-docs/?DduaF6">(Mathôt et al.,
 2012)</a> is a free, open
 source experiment builder designed to create a wide range of psychology
@@ -1175,7 +683,7 @@ class="underline">section</span></a>
 on their website dedicated to it.</p>
 </section>
 <section id="how-to-get-started">
-<h2>How to get started<a class="headerlink" href="#how-to-get-started" title="Permalink to this headline">#</a></h2>
+<h2>How to get started<a class="headerlink" href="#how-to-get-started" title="Permalink to this heading">#</a></h2>
 <p>To download OpenSesame on your own computer, visit their <a class="reference external" href="https://osdoc.cogsci.nl/"><span
 class="underline">website</span></a> and click on
 the green download button.</p>
@@ -1202,7 +710,7 @@ fixed, it is best to use a Windows computer or Mac OS version 10.13 or
 less.</p>
 </section>
 <section id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">#</a></h2>
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h2>
 <p>There are some additional resources out there, primarily on the
 OpenSesame website. There is a <a class="reference external" href="https://osdoc.cogsci.nl/3.2/tutorials/beginner/"><span
 class="underline">tutorial</span></a>
@@ -1216,7 +724,7 @@ paradigm if you want to see it in action and some more advanced Python
 programming features.</p>
 </section>
 <section id="this-guide">
-<h2>This guide<a class="headerlink" href="#this-guide" title="Permalink to this headline">#</a></h2>
+<h2>This guide<a class="headerlink" href="#this-guide" title="Permalink to this heading">#</a></h2>
 <p>The aim of this guide is to get you up and running using OpenSesame.
 There are three tasks demonstrating different features of OpenSesame
 with increasing levels of complexity. If your needs are not directly
@@ -1245,9 +753,9 @@ new line in PT Mono:</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="task-one-stroop-task">
-<h1>Task one: Stroop task<a class="headerlink" href="#task-one-stroop-task" title="Permalink to this headline">#</a></h1>
+<h1>Task one: Stroop task<a class="headerlink" href="#task-one-stroop-task" title="Permalink to this heading">#</a></h1>
 <section id="creating-the-stroop-task">
-<h2>Creating the Stroop task<a class="headerlink" href="#creating-the-stroop-task" title="Permalink to this headline">#</a></h2>
+<h2>Creating the Stroop task<a class="headerlink" href="#creating-the-stroop-task" title="Permalink to this heading">#</a></h2>
 <p>To get a look at OpenSesame, we will first create one of the simplest
 and most famous psychology experiments, the Stroop task. This
 demonstrates the automaticity of reading as identifying the font colour
@@ -1258,7 +766,7 @@ of the font. We will create a single block of trials to demonstrate the
 task. As you go through the guide, I recommend <strong>saving your experiment
 every time you reach a new sub-heading</strong> like the next line.</p>
 <section id="creating-a-new-experiment">
-<h3>Creating a new experiment<a class="headerlink" href="#creating-a-new-experiment" title="Permalink to this headline">#</a></h3>
+<h3>Creating a new experiment<a class="headerlink" href="#creating-a-new-experiment" title="Permalink to this heading">#</a></h3>
 <p>If you open OpenSesame on your computer, you should get a window that
 looks like this:</p>
 <img alt="content/03_conditionals/attachment:media/image24.png" src="content/03_conditionals/attachment:media/image24.png" />
@@ -1284,7 +792,7 @@ default size of the font to 32, as 18 is too small to read and it saves
 you changing it every time you create a new component.</p>
 </section>
 <section id="the-building-blocks-of-creating-an-experiment">
-<h3>The building blocks of creating an experiment<a class="headerlink" href="#the-building-blocks-of-creating-an-experiment" title="Permalink to this headline">#</a></h3>
+<h3>The building blocks of creating an experiment<a class="headerlink" href="#the-building-blocks-of-creating-an-experiment" title="Permalink to this heading">#</a></h3>
 <p>Before making the Stroop task, we will go over some of the basics of
 structuring an experiment in OpenSesame. The design of your experiment
 will be shown in the Overview window, and it is displayed sequentially
@@ -1321,7 +829,7 @@ trial and focus the participant’s attention in the location where you
 will be presenting the stimulus.</p>
 </section>
 <section id="creating-the-fixation-dot">
-<h3>Creating the fixation dot<a class="headerlink" href="#creating-the-fixation-dot" title="Permalink to this headline">#</a></h3>
+<h3>Creating the fixation dot<a class="headerlink" href="#creating-the-fixation-dot" title="Permalink to this heading">#</a></h3>
 <p>This can be created using a sketchpad component
 <img alt="content/03_conditionals/attachment:media/image82.png" src="content/03_conditionals/attachment:media/image82.png" />.
 This is a very flexible component where you can present text, shapes,
@@ -1347,7 +855,7 @@ fixation. You should now have a screen that looks like this:</p>
 <img alt="content/03_conditionals/attachment:media/image8.png" src="content/03_conditionals/attachment:media/image8.png" />
 </section>
 <section id="creating-the-word-component">
-<h3>Creating the word component<a class="headerlink" href="#creating-the-word-component" title="Permalink to this headline">#</a></h3>
+<h3>Creating the word component<a class="headerlink" href="#creating-the-word-component" title="Permalink to this heading">#</a></h3>
 <p>In the Stroop task, participants are shown colour words and the font is
 either the same colour as the word (congruent) or a different colour to
 the word (incongruent). Therefore, the next thing we need to do is
@@ -1371,7 +879,7 @@ window that looks like this:</p>
 <img alt="content/03_conditionals/attachment:media/image78.png" src="content/03_conditionals/attachment:media/image78.png" />
 </section>
 <section id="creating-the-keyboard-response-component">
-<h3>Creating the keyboard response component<a class="headerlink" href="#creating-the-keyboard-response-component" title="Permalink to this headline">#</a></h3>
+<h3>Creating the keyboard response component<a class="headerlink" href="#creating-the-keyboard-response-component" title="Permalink to this heading">#</a></h3>
 <p>The next component is keyboard_response
 <img alt="content/03_conditionals/attachment:media/image2.png" src="content/03_conditionals/attachment:media/image2.png" />.
 Drag this from the menu and place it after word. We need this to tell
@@ -1393,7 +901,7 @@ keyboard_response:</p>
 <img alt="content/03_conditionals/attachment:media/image72.png" src="content/03_conditionals/attachment:media/image72.png" />
 </section>
 <section id="creating-a-blank-screen">
-<h3>Creating a blank screen<a class="headerlink" href="#creating-a-blank-screen" title="Permalink to this headline">#</a></h3>
+<h3>Creating a blank screen<a class="headerlink" href="#creating-a-blank-screen" title="Permalink to this heading">#</a></h3>
 <p>After the keyboard response, we will place another sketchpad component
 <img alt="content/03_conditionals/attachment:media/image82.png" src="content/03_conditionals/attachment:media/image82.png" />
 to signal the end of the trial. This time it will just be a blank screen
@@ -1402,7 +910,7 @@ sketchpad components and name it blank. We do not need to add any text
 or fixdot elements.</p>
 </section>
 <section id="creating-the-logger-component">
-<h3>Creating the logger component<a class="headerlink" href="#creating-the-logger-component" title="Permalink to this headline">#</a></h3>
+<h3>Creating the logger component<a class="headerlink" href="#creating-the-logger-component" title="Permalink to this heading">#</a></h3>
 <p>The next component that we need is a logger
 <img alt="content/03_conditionals/attachment:media/image81.png" src="content/03_conditionals/attachment:media/image81.png" />
 to save the data. OpenSesame does not save the responses by default, so
@@ -1412,7 +920,7 @@ just keep the default option here. It just saves every available
 variable on each trial.</p>
 </section>
 <section id="creating-the-end-of-experiment-screen">
-<h3>Creating the end of experiment screen<a class="headerlink" href="#creating-the-end-of-experiment-screen" title="Permalink to this headline">#</a></h3>
+<h3>Creating the end of experiment screen<a class="headerlink" href="#creating-the-end-of-experiment-screen" title="Permalink to this heading">#</a></h3>
 <p>The final component we need is a screen to tell the participant the
 experiment has finished. Without this, the experiment just closes which
 can make the participant panic and think they have done something wrong.
@@ -1431,7 +939,7 @@ an experiment that looks like this in the Overview window:</p>
 <img alt="content/03_conditionals/attachment:media/image67.png" src="content/03_conditionals/attachment:media/image67.png" />
 </section>
 <section id="modifying-the-welcome-message">
-<h3>Modifying the welcome message<a class="headerlink" href="#modifying-the-welcome-message" title="Permalink to this headline">#</a></h3>
+<h3>Modifying the welcome message<a class="headerlink" href="#modifying-the-welcome-message" title="Permalink to this heading">#</a></h3>
 <p>The final thing to do before we test whether the experiment works is to
 change welcome. By default, this lists the version of OpenSesame that
 you are using. You can edit the pre-existing text by hovering over the
@@ -1443,7 +951,7 @@ duration, as we want the participant to start the experiment when they
 are ready.</p>
 </section>
 <section id="time-to-test-the-experiment">
-<h3>Time to test the experiment<a class="headerlink" href="#time-to-test-the-experiment" title="Permalink to this headline">#</a></h3>
+<h3>Time to test the experiment<a class="headerlink" href="#time-to-test-the-experiment" title="Permalink to this heading">#</a></h3>
 <p>Now it is time to make sure everything works! In the menu, there are
 three arrow buttons.
 <img alt="content/03_conditionals/attachment:media/image71.png" src="content/03_conditionals/attachment:media/image71.png" />
@@ -1468,7 +976,7 @@ addition. Now that we know one trial works, we can add in multiple words
 and make the colour of the word change.</p>
 </section>
 <section id="manipulating-the-presentation-of-word-and-colour">
-<h3>Manipulating the presentation of word and colour<a class="headerlink" href="#manipulating-the-presentation-of-word-and-colour" title="Permalink to this headline">#</a></h3>
+<h3>Manipulating the presentation of word and colour<a class="headerlink" href="#manipulating-the-presentation-of-word-and-colour" title="Permalink to this heading">#</a></h3>
 <p>When we created the word component, we specified green as the word and
 colour. For the Stroop task, we want different words and colours
 depending on the condition. Therefore, we need to make both the word and
@@ -1479,7 +987,7 @@ runs). We then need to change word to allow the word and colour to
 change every trial. We will start with block_loop.</p>
 </section>
 <section id="editing-the-block-loop-component">
-<h3>Editing the block_loop component<a class="headerlink" href="#editing-the-block-loop-component" title="Permalink to this headline">#</a></h3>
+<h3>Editing the block_loop component<a class="headerlink" href="#editing-the-block-loop-component" title="Permalink to this heading">#</a></h3>
 <p>If you click on block_loop, it looks like an Excel sheet with lots of
 cells. This is where we can define our variables and conditions. The
 rules here are every column is a variable, and each row is an individual
@@ -1514,7 +1022,7 @@ of these rows. Our next task is to edit the word component to use these
 new variables.</p>
 </section>
 <section id="editing-the-word-component">
-<h3>Editing the word component<a class="headerlink" href="#editing-the-word-component" title="Permalink to this headline">#</a></h3>
+<h3>Editing the word component<a class="headerlink" href="#editing-the-word-component" title="Permalink to this heading">#</a></h3>
 <p>If you click on the word component, Green is still in the middle of the
 screen with green font. We need to click on the settings icon
 <img alt="content/03_conditionals/attachment:media/image6.png" src="content/03_conditionals/attachment:media/image6.png" />
@@ -1536,7 +1044,7 @@ mistake. The script should now look like this:</p>
 keyboard_response.</p>
 </section>
 <section id="editing-keyboard-response">
-<h3>Editing keyboard_response<a class="headerlink" href="#editing-keyboard-response" title="Permalink to this headline">#</a></h3>
+<h3>Editing keyboard_response<a class="headerlink" href="#editing-keyboard-response" title="Permalink to this heading">#</a></h3>
 <p>We can now specify what variable determines a Correct response and enter
 several Allowed responses. In block_loop, we created a variable called
 correct_resp to tell OpenSesame what response should be provided. We
@@ -1549,7 +1057,7 @@ have a window that looks like this:</p>
 <img alt="content/03_conditionals/attachment:media/image29.png" src="content/03_conditionals/attachment:media/image29.png" />
 </section>
 <section id="test-the-experiment">
-<h3>Test the experiment<a class="headerlink" href="#test-the-experiment" title="Permalink to this headline">#</a></h3>
+<h3>Test the experiment<a class="headerlink" href="#test-the-experiment" title="Permalink to this heading">#</a></h3>
 <p>We can now test it works again using quick run. It should run for 8
 trials providing you have followed all the instructions closely. If you
 get an error message, use the instructions to try and locate the
@@ -1558,7 +1066,7 @@ you have entered, so make sure it is all typed out exactly as in the
 instructions.</p>
 </section>
 <section id="increase-the-number-of-trials">
-<h3>Increase the number of trials<a class="headerlink" href="#increase-the-number-of-trials" title="Permalink to this headline">#</a></h3>
+<h3>Increase the number of trials<a class="headerlink" href="#increase-the-number-of-trials" title="Permalink to this heading">#</a></h3>
 <p>Now that we know everything works fine, we can scale the experiment up
 to provide more trials. If we go back to block_loop, we can change the
 Repeat value to 4. This repeats all of our conditions 4 times to produce
@@ -1574,7 +1082,7 @@ wrote them in. This can occasionally be useful if the order of
 presentation <em>is</em> important.</p>
 </section>
 <section id="run-the-experiment-full-screen">
-<h3>Run the experiment full screen<a class="headerlink" href="#run-the-experiment-full-screen" title="Permalink to this headline">#</a></h3>
+<h3>Run the experiment full screen<a class="headerlink" href="#run-the-experiment-full-screen" title="Permalink to this heading">#</a></h3>
 <p>Now it is time to run the experiment in full screen (the single green
 arrow) and enter a subject number. In other places, this could be called
 a participant number or code, but they mean the same thing. It is just
@@ -1591,7 +1099,7 @@ see how we could analyse it.</p>
 </section>
 </section>
 <section id="analysing-response-time-data-from-the-stroop-task">
-<h2>Analysing response time data from the Stroop task<a class="headerlink" href="#analysing-response-time-data-from-the-stroop-task" title="Permalink to this headline">#</a></h2>
+<h2>Analysing response time data from the Stroop task<a class="headerlink" href="#analysing-response-time-data-from-the-stroop-task" title="Permalink to this heading">#</a></h2>
 <p>Every time you run the experiment, OpenSesame saves the data as a .csv
 file. This stands for comma-separated values. If you have Microsoft
 Excel or Openoffice on your computer, you should be able to double click
@@ -1607,7 +1115,7 @@ Stroop effect in 32 trials. There are two versions to the import
 instructions depending on whether you are using version 23 or 25 of
 SPSS.</p>
 <section id="importing-the-data-in-spss-version-23">
-<h3>Importing the data in SPSS version 23<a class="headerlink" href="#importing-the-data-in-spss-version-23" title="Permalink to this headline">#</a></h3>
+<h3>Importing the data in SPSS version 23<a class="headerlink" href="#importing-the-data-in-spss-version-23" title="Permalink to this heading">#</a></h3>
 <p>Open SPSS and select open new dataset. This will present you with a
 blank data view screen to work from. In the main menu, click File &gt;
 Open &gt; Data. This will present you with a box to Open Data in. In order
@@ -1634,7 +1142,7 @@ save the file format for future use, and we do not need to paste the
 syntax. Click Finish to complete the process and the data will be
 available in the data view screen of SPSS. The whole process from above
 is shown in the following series of screenshots:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><img alt="content/03_conditionals/attachment:media/image17.png" src="content/03_conditionals/attachment:media/image17.png" /></p></th>
 <th class="head"><p><img alt="content/03_conditionals/attachment:media/image62.png" src="content/03_conditionals/attachment:media/image62.png" /></p></th>
@@ -1651,7 +1159,7 @@ is shown in the following series of screenshots:</p>
 </table>
 </section>
 <section id="importing-the-data-in-spss-version-25">
-<h3>Importing the data in SPSS version 25<a class="headerlink" href="#importing-the-data-in-spss-version-25" title="Permalink to this headline">#</a></h3>
+<h3>Importing the data in SPSS version 25<a class="headerlink" href="#importing-the-data-in-spss-version-25" title="Permalink to this heading">#</a></h3>
 <p>If you have version 25 of SPSS, you can follow the instructions for
 version 23 and the process works, but in version 25 there is a more
 streamlined option for importing data. Open SPSS and select new dataset.
@@ -1666,7 +1174,7 @@ change Decimal Symbol to comma. If not, you should just need to press
 OK.</p>
 </section>
 <section id="processing-the-data">
-<h3>Processing the data<a class="headerlink" href="#processing-the-data" title="Permalink to this headline">#</a></h3>
+<h3>Processing the data<a class="headerlink" href="#processing-the-data" title="Permalink to this heading">#</a></h3>
 <p>Before we do any analysis, it is important to process the data.
 Conventionally, we remove any incorrect responses as they may be
 unreliable. In addition, we should ensure that there are no problematic
@@ -1695,7 +1203,7 @@ and above 1000ms. When it comes to designing your own studies, you will
 need to look more closely at these articles and methods.</p>
 </section>
 <section id="identifying-extreme-responses">
-<h3>Identifying extreme responses<a class="headerlink" href="#identifying-extreme-responses" title="Permalink to this headline">#</a></h3>
+<h3>Identifying extreme responses<a class="headerlink" href="#identifying-extreme-responses" title="Permalink to this heading">#</a></h3>
 <p>In order to process the data, we will do it in two steps. The first is
 to create a new variable that defines any outliers beyond 100ms and
 1000ms. On the main menu, click on Transform &gt; Recode into Different
@@ -1722,7 +1230,7 @@ extreme_responses. Any row with a 0 is fine, and any with a 1 is
 outside of our boundary and considered an extreme response.</p>
 </section>
 <section id="filtering-out-extreme-and-incorrect-responses">
-<h3>Filtering out extreme and incorrect responses<a class="headerlink" href="#filtering-out-extreme-and-incorrect-responses" title="Permalink to this headline">#</a></h3>
+<h3>Filtering out extreme and incorrect responses<a class="headerlink" href="#filtering-out-extreme-and-incorrect-responses" title="Permalink to this heading">#</a></h3>
 <p>We can now get SPSS to ignore any of our incorrect and extreme
 responses. You can do this in SPSS by clicking on the main menu Data &gt;
 Select Cases. You then need to select ‘if condition is satisfied’ and
@@ -1740,7 +1248,7 @@ incorrect or considered extreme. When we run any analyses, this will not
 be included but does not delete them.</p>
 </section>
 <section id="getting-the-outcome-variable">
-<h3>Getting the outcome variable<a class="headerlink" href="#getting-the-outcome-variable" title="Permalink to this headline">#</a></h3>
+<h3>Getting the outcome variable<a class="headerlink" href="#getting-the-outcome-variable" title="Permalink to this heading">#</a></h3>
 <p>To get the average response for our two conditions, we can click on
 Analyze &gt; Descriptive Statistics &gt; Explore. Drag response_time into
 Dependent List and congruent into Factor List. Select Statistics under
@@ -1761,7 +1269,7 @@ will get a more accurate estimate, but this is fine for demonstration
 purposes. If this was entered in SPSS to analyse the data for each
 participant in an experiment, you would need the variables organised
 something like this:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>participant</p></th>
 <th class="head"><p>congruent_rt</p></th>
@@ -1788,14 +1296,14 @@ when you have finished.</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="task-two-eriksen-flanker-task">
-<h1>Task two: Eriksen Flanker task<a class="headerlink" href="#task-two-eriksen-flanker-task" title="Permalink to this headline">#</a></h1>
+<h1>Task two: Eriksen Flanker task<a class="headerlink" href="#task-two-eriksen-flanker-task" title="Permalink to this heading">#</a></h1>
 <p>The Stroop task is probably the most famous task in the whole of
 psychology. Without knowing the specific details, you might be able to
 have a go at creating a version of it yourself. However, what would you
 do if you came across an unfamiliar task that was described in a study
 you want to extend or replicate?</p>
 <section id="how-do-you-recreate-a-psychology-experiment">
-<h2>How do you recreate a psychology experiment?<a class="headerlink" href="#how-do-you-recreate-a-psychology-experiment" title="Permalink to this headline">#</a></h2>
+<h2>How do you recreate a psychology experiment?<a class="headerlink" href="#how-do-you-recreate-a-psychology-experiment" title="Permalink to this heading">#</a></h2>
 <p>The aim of learning how to use OpenSesame is to enable you to create
 psychology experiments that you can use in your research. However, what
 kind of experiments can you create and where do you find out how to
@@ -2045,7 +1553,7 @@ diagram is from an EEG study by Rass et al. (2012).</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="tips-for-debugging-experiments">
-<h1>Tips for Debugging Experiments<a class="headerlink" href="#tips-for-debugging-experiments" title="Permalink to this headline">#</a></h1>
+<h1>Tips for Debugging Experiments<a class="headerlink" href="#tips-for-debugging-experiments" title="Permalink to this heading">#</a></h1>
 <p>Debugging an experiment requires problem solving and can be considered a
 skill in itself. It is similar to the process of science. You have a
 hypothesis about a problem you are facing. You systematically test the
@@ -2059,8 +1567,8 @@ very similar to solving problems in code. Some of this advice is taken
 from the excellent book on another Python based experiment builder
 called PsychoPy (Peirce and MacAskill, 2018).</p>
 <section id="steps-to-take-when-debugging">
-<h2>Steps to take when debugging<a class="headerlink" href="#steps-to-take-when-debugging" title="Permalink to this headline">#</a></h2>
-<ol>
+<h2>Steps to take when debugging<a class="headerlink" href="#steps-to-take-when-debugging" title="Permalink to this heading">#</a></h2>
+<ol class="arabic">
 <li><p>Read the error messages carefully. If your experiment crashes,</p>
 <blockquote>
 <div><p>OpenSesame does its very best to tell you what caused the problem.
@@ -2078,7 +1586,7 @@ missed the underscore and it should be “cue_type”. Not all of the
 problems will be this easy, but you should be directed by OpenSesame
 to the simple fixes.</p>
 </div></blockquote>
-<ol>
+<ol class="arabic">
 <li><p>Look for typos carefully. In my own experience, a stray typo is one</p>
 <blockquote>
 <div><p>of the most common causes of an experiment crashing. As Python is
@@ -2112,7 +1620,7 @@ problems.</p>
 </ol>
 </section>
 <section id="asking-for-help">
-<h2>Asking for help<a class="headerlink" href="#asking-for-help" title="Permalink to this headline">#</a></h2>
+<h2>Asking for help<a class="headerlink" href="#asking-for-help" title="Permalink to this heading">#</a></h2>
 <p>The aim of this guide is to provide you with support to create
 experiments on your own. However, there will be times where you do not
 know how to put your idea into practice, or you cannot figure out what
@@ -2126,7 +1634,7 @@ often lead you to the solution yourself as you see the bigger picture.</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="glossary">
-<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">#</a></h1>
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Argument</p></li>
 </ul>
@@ -2230,7 +1738,7 @@ programming language.</p>
 trials are repeated many times to calculate the average response.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
+<h1>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
 <p>Detandt, S., Bazan, A., Schröder, E., Olyff, G., Kajosch, H., Verbanck,
 P., &amp; Campanella, S. (2017). A smoking-related background helps moderate
 smokers to focus: An event-related potential study using a Go-NoGo task.
@@ -2273,7 +1781,7 @@ demands in different variants of the go/no-go paradigm.
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./content\03_conditionals"
         },
         predefinedOutput: true
@@ -2281,36 +1789,135 @@ demands in different variants of the go/no-go paradigm.
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-opensesame">Why OpenSesame?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-get-started">How to get started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-guide">This guide</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-one-stroop-task">Task one: Stroop task</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-stroop-task">Creating the Stroop task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-experiment">Creating a new experiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-building-blocks-of-creating-an-experiment">The building blocks of creating an experiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-fixation-dot">Creating the fixation dot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-word-component">Creating the word component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-keyboard-response-component">Creating the keyboard response component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-blank-screen">Creating a blank screen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-logger-component">Creating the logger component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-end-of-experiment-screen">Creating the end of experiment screen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-the-welcome-message">Modifying the welcome message</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-to-test-the-experiment">Time to test the experiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-the-presentation-of-word-and-colour">Manipulating the presentation of word and colour</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-the-block-loop-component">Editing the block_loop component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-the-word-component">Editing the word component</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-keyboard-response">Editing keyboard_response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-the-experiment">Test the experiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increase-the-number-of-trials">Increase the number of trials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-experiment-full-screen">Run the experiment full screen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysing-response-time-data-from-the-stroop-task">Analysing response time data from the Stroop task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-the-data-in-spss-version-23">Importing the data in SPSS version 23</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-the-data-in-spss-version-25">Importing the data in SPSS version 25</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-the-data">Processing the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identifying-extreme-responses">Identifying extreme responses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-out-extreme-and-incorrect-responses">Filtering out extreme and incorrect responses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-outcome-variable">Getting the outcome variable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-two-eriksen-flanker-task">Task two: Eriksen Flanker task</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-you-recreate-a-psychology-experiment">How do you recreate a psychology experiment?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-debugging-experiments">Tips for Debugging Experiments</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-take-when-debugging">Steps to take when debugging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asking-for-help">Asking for help</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary">Glossary</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Jeshua Tromp & Henk van Steenbergen<br/>
-  
-      &copy; Copyright Leiden University; Attribution: Jeshua Tromp &amp; Henk van Steenbergen, Leiden University, with CC BY-NC-SA 2.0 license.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Jeshua Tromp & Henk van Steenbergen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Leiden University; Attribution: Jeshua Tromp &amp; Henk van Steenbergen, Leiden University, with CC BY-NC-SA 2.0 license.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
