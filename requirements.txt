@@ -1,0 +1,7 @@
+jupyter-book
+seaborn
+numpy
+pandas
+matplotlib
+IPython
+jupyterquiz
