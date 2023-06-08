@@ -4,6 +4,8 @@
 # # Python lessons: Getting Ready
 # 
 # > **Note** The videos below origin from the [Python for Everyone Course](https://www.py4e.com) by Charles R. Severance licensed under Creative Commons Attribution 3.0. The main content of the lessons is also covered in the text provided [here](https://www.py4e.com/html3/01-intro).
+# 
+# Note work in progress!
 
 # In[1]:
 
