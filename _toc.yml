@@ -3,70 +3,26 @@
 format: jb-book
 root: intro
 chapters:
-  - file: content/01_getting_ready/gettingready_intro
+  - file: content/.01_OpenSesameIntro/01_intro.ipynb
     sections:
-      - file: content/01_getting_ready/gettingready_software
-      - file: content/01_getting_ready/gettingready_python_lessons
-      - file: content/01_getting_ready/gettingready_python_exercises
-  - file: content/02_variables/variables_intro
+      - file: content/.01_OpenSesameIntro/gettingready_software.ipynb
+      - file: content/.01_OpenSesameIntro/conflict_tasks_Stroop.ipynb
+  - file: content/.02_OpenSesameExpDesignI/02_intro.ipynb
     sections:
-      - file: content/02_variables/variables_python_lessons
-      - file: content/02_variables/variables_python_exercises
-      - file: content/02_variables/gaze_cuing
-  - file: content/03_conditionals/conditionals_intro
+      - file: content/.02_OpenSesameExpDesignI/conflict_tasks_flanker.ipynb
+  - file: content/.03_OpenSesameExpDesignII/03_intro.ipynb
     sections:
-      - file: content/03_conditionals/conditionals_python_lessons
-      - file: content/03_conditionals/conditionals_python_exercises
-      - file: content/03_conditionals/conflict_tasks
-  - file: content/04_functions/functions_intro
+      - file: content/.03_OpenSesameExpDesignII/conflict_tasks_gonogo.ipynb
+  - file: content/.04_OpenSesameDebugging/04_intro.ipynb
     sections:
-      - file: content/04_functions/functions_python_lessons
-      - file: content/04_functions/functions_python_exercises
-      - file: content/04_functions/wcst
-      - file: content/04_functions/ultimatumgame/UltimatumGame
-  - file: content/05_loops/loops_intro
+      - file: content/.04_OpenSesameDebugging/gaze_cuing.ipynb
+  - file: content/.05_variables/05_intro.ipynb
     sections:
-      - file: content/05_loops/loops_python_lessons
-      - file: content/05_loops/loops_python_exercises
-      - file: content/05_loops/cyberball/Cyberball
-  - file: content/06_strings/strings_intro
+      - file: content/.05_variables/gettingready_pythonsoftware.ipynb
+      - file: content/.05_variables/variables_python_exercises.ipynb
+      - file: content/.05_variables/variables_python_lessons.ipynb
+  - file: content/.06_strings_conditionals/06_intro.ipynb
     sections:
-      - file: content/06_strings/strings_python_lessons
-      - file: content/06_strings/strings_python_exercises
-      - file: content/06_strings/digitspan/digitspan
-  - file: content/07_files/files_intro
-    sections:
-      - file: content/07_files/files_python_lessons
-      - file: content/07_files/files_python_exercises
-      - file: content/07_files/merging_files
-  - file: content/08_lists/lists_intro
-    sections:
-      - file: content/08_lists/lists_python_lessons
-      - file: content/08_lists/lists_python_exercises
-      - file: content/08_lists/visual_search
-  - file: content/09_numbers/numbers_intro
-    sections:
-      - file: content/09_numbers/numbers_python_lessons
-      - file: content/09_numbers/numbers_python_exercises
-      - file: content/09_numbers/attentional_blink
-  - file: content/10_dataframes/dataframes_intro
-    sections:
-      - file: content/10_dataframes/dataframes_python_lessons
-      - file: content/10_dataframes/dataframes_python_exercises
-      - file: content/10_dataframes/datawrangling
-  - file: content/11_plotting/plotting_intro
-    sections:
-      - file: content/11_plotting/plotting_python_lessons
-      - file: content/11_plotting/plotting_python_exercises
-      - file: content/11_plotting/plotting_behavioral_data
-  - file: content/12_ques/ques_intro
-    sections:
-      - file: content/12_ques/ques_python_lessons
-      - file: content/12_ques/ques_python_exercises
-      - file: content/12_ques/questionnaires/questionnaire
-  - file: content/13_input_output/io_intro
-    sections:
-      - file: content/13_input_output/io_python_lessons
-      - file: content/13_input_output/io_python_exercises
-      - file: content/13_input_output/parallelport
-  - file: content/solutions_book/solutions
+      - file: content/.06_strings_conditionals/wcst.ipynb
+      - file: content/.06_strings_conditionals/conditionals_python_lessons.ipynb
+      - file: content/.06_strings_conditionals/strings_python_lessons.ipynb

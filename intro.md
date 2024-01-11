@@ -1,10 +1,10 @@
-# Programming Psychological Experiments using python and OpenSesame (academic year 2023-2024) 
+# Programming Psychological Experiments using  OpenSesame and python (academic year 2023-2024) 
 
 This is work in progress. Please do not use
 
 Welcome to this JupyterBook, which provides the course material covered partially in the course [Experimentation I: Programming Psychological Experiments](https://studiegids.universiteitleiden.nl/en/courses/114580/experimentation-i-programming-psychological-experiments). This course is part of the [research master program in Psychology](https://www.universiteitleiden.nl/en/education/study-programmes/master/psychology-research) at [Leiden University](http://leidenuniv.nl/) in the Netherlands.
 
-Using this material, you can learn how to code in python, build experiments using OpenSesame, and do basic data preprocessing in python. Like the software packages we will be using, all of the material in this course is open and freely available. Please note that the compiled JupyterBook is a collection of teaching material from various sources, and it heavily relies on and integrates earlier work generously provided by others online. We always acknowledge the work of these contributors whenever we use their material. The major contributors are mentioned below.
+Using this material, you can learn how to build experiments using OpenSesame and get a primer into basic coding using python. Like the software packages we will be using, all of the material in this course is open and freely available. Please note that the compiled JupyterBook is a collection of teaching material from various sources, and it heavily relies on and integrates earlier work generously provided by others online. We always acknowledge the work of these contributors whenever we use their material. The major contributors are mentioned below.
 
 **How to use this material?**
 
