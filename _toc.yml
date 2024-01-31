@@ -26,3 +26,6 @@ chapters:
       - file: content/.06_conditionals/wcst.ipynb
       - file: content/.06_conditionals/conditionals_python_lessons.ipynb
       - file: content/.06_conditionals/strings_python_lessons.ipynb
+  - file: content/.07_functions/07_intro.ipynb
+  - file: content/.08_loops/08_intro.ipynb
+  - file: content/.09_lists/09_intro.ipynb
