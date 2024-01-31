@@ -21,8 +21,8 @@ chapters:
       - file: content/.05_variables/gettingready_pythonsoftware.ipynb
       - file: content/.05_variables/variables_python_exercises.ipynb
       - file: content/.05_variables/variables_python_lessons.ipynb
-  - file: content/.06_strings_conditionals/06_intro.ipynb
+  - file: content/.06_conditionals/06_intro.ipynb
     sections:
-      - file: content/.06_strings_conditionals/wcst.ipynb
-      - file: content/.06_strings_conditionals/conditionals_python_lessons.ipynb
-      - file: content/.06_strings_conditionals/strings_python_lessons.ipynb
+      - file: content/.06_conditionals/wcst.ipynb
+      - file: content/.06_conditionals/conditionals_python_lessons.ipynb
+      - file: content/.06_conditionals/strings_python_lessons.ipynb
