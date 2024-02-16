@@ -29,3 +29,4 @@ chapters:
   - file: content/.07_functions/07_intro.ipynb
   - file: content/.08_loops/08_intro.ipynb
   - file: content/.09_lists/09_intro.ipynb
+  - file: content/.solutions_book/solutions.ipynb
