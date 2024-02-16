@@ -20,6 +20,7 @@ chapters:
     sections:
       - file: content/.05_variables/gettingready_pythonsoftware.ipynb
       - file: content/.05_variables/variables_python_exercises.ipynb
+      - file: content/.05_variables/gettingready_python_lessons.ipynb
       - file: content/.05_variables/variables_python_lessons.ipynb
   - file: content/.06_conditionals/06_intro.ipynb
     sections:
