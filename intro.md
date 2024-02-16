@@ -10,7 +10,7 @@ Using this material, you can learn how to build experiments using OpenSesame and
 
 Make sure you save your work in a well-organized folder structure. Some of the later exercises build on work you did earlier during the course.
 
-We have provided solutions to all exercises [here; LINK WILL BE AVAILABLE IN FEB 2024](TODO). Just keep in mind that there are often multiple ways to solve a problem, so if you come up with a different solution, that doesn't necessarily mean you're wrong. Don't forget that figuring out how to solve a problem on your own is an important part of the learning process and can be incredibly fulfilling. Embrace the challenge and take pride in your ability to find solutions independently!
+We have provided solutions to all exercises [here](https://henkvs.github.io/experimentation_i_2324/content/.solutions_book/solutions.html). Just keep in mind that there are often multiple ways to solve a problem, so if you come up with a different solution, that doesn't necessarily mean you're wrong. Don't forget that figuring out how to solve a problem on your own is an important part of the learning process and can be incredibly fulfilling. Embrace the challenge and take pride in your ability to find solutions independently!
 
 - If you're taking this course in-person at Leiden University: This course material is partially covered in an intensive eight-week course at Leiden University, where you will participate in plenary and practical sessions to receive live feedback and help. No prior programming knowledge is assumed.
 
