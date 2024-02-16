@@ -27,7 +27,7 @@ chapters:
       - file: content/.06_conditionals/conditionals_python_lessons.ipynb
       - file: content/.06_conditionals/strings_python_lessons.ipynb
   - file: content/.07_functions/07_intro.ipynb
-      sections:
+    sections:
         - file: content/.07_functions/ultimatumgame/UltimatumGame.ipynb
   - file: content/.08_loops/08_intro.ipynb
     sections:
