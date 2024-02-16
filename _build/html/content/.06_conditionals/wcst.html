@@ -215,12 +215,23 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="06_intro.html">Chapter 6 - Conditionals</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">The Wisconsin Card Sorting Task in OpenSesame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conditionals_python_lessons.html">Optional Study Material - Python lessons: Conditionals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="strings_python_lessons.html">Optional Study Material - Python lessons: Strings</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../.07_functions/07_intro.html">Chapter 7 - Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../.08_loops/08_intro.html">Chapter 8 - Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../.09_lists/09_intro.html">Chapter 9 - Lists and strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../.09_lists/09_intro.html">Chapter 9 - Strings and lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../.solutions_book/solutions.html">Solutions</a></li>
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -459,7 +470,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -475,6 +488,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-calculate-average-performance">Exercise 1. Calculate average performance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-create-flanker-arrows-using-canvas-commands-advanced">Exercise 2. Create flanker arrows using Canvas commands (advanced)</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -512,17 +534,16 @@ document.write(`
         ></iframe>
         </div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Exercise 1. Calculate average performance
-
-Open the gaze cueing task you created in Chapter 4. Change the TimeOut value of the Keyboard_response object to 500 (ms) so that missing values are recorded. How does OpenSesame store missing responses? Check this in the log file.
-
-Now count the number of times the response was correct, incorrect and missing. Also, count the total number of trials presented in the block. Present the percentage of correct, incorrect, and missing responses in the feedback item. Compare whether the values you calculated correspond with the values automatically created by OpenSesame.
-</pre></div>
-</div>
-</div>
-</div>
+<section id="exercise-1-calculate-average-performance">
+<h2>Exercise 1. Calculate average performance<a class="headerlink" href="#exercise-1-calculate-average-performance" title="Permalink to this heading">#</a></h2>
+<p>Open the gaze cueing task you created in Chapter 4. Change the TimeOut value of the Keyboard_response object to 500 (ms) so that missing values are recorded. How does OpenSesame store missing responses? Check this in the log file.</p>
+<p>Now count the number of times the response was correct, incorrect and missing. Also, count the total number of trials presented in the block. Present the percentage of correct, incorrect, and missing responses in the feedback item. Compare whether the values you calculated correspond with the values automatically created by OpenSesame.</p>
+</section>
+<section id="exercise-2-create-flanker-arrows-using-canvas-commands-advanced">
+<h2>Exercise 2. Create flanker arrows using Canvas commands (advanced)<a class="headerlink" href="#exercise-2-create-flanker-arrows-using-canvas-commands-advanced" title="Permalink to this heading">#</a></h2>
+<p>Open the flanker task that you previously created in Chapter 2. Modify it by replacing the stimuli consisting of Ss and Hs with left- and right-pointing arrows. Use python code to draw these arrows using a series of Canvas commands that draw lines. To generate a display of five arrows, you will probably need a minimum of ten Canvas commands. Use conditionals to make sure the target and distractor arrows point to the right direction.</p>
+<p>Hint: Start simple and work step-by-step. First, draw the target arrow in one direction and test if it works (e.g. draw a line between coordinates -10, -10, 10, 0 and a line between coordinates +10, -10, 10, 0). Then, use a conditional statement to ensure the target arrow points in the correct direction. If this works, add flanker arrows. Next, include a conditional statement to make the flanker arrows point in the right direction.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -580,7 +601,21 @@ Now count the number of times the response was correct, incorrect and missing. A
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-calculate-average-performance">Exercise 1. Calculate average performance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-create-flanker-arrows-using-canvas-commands-advanced">Exercise 2. Create flanker arrows using Canvas commands (advanced)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
