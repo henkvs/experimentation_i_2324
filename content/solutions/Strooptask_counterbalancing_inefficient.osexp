@@ -1,0 +1,182 @@
+---
+API: 3
+OpenSesame: 4.0.13
+Platform: nt
+---
+set width 1024
+set uniform_coordinates yes
+set title "Stroop task"
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set sampler_backend psycho
+set round_decimals 2
+set mouse_backend psycho
+set keyboard_backend psycho
+set height 768
+set fullscreen no
+set form_clicks no
+set foreground white
+set font_underline no
+set font_size 32
+set font_italic no
+set font_family mono
+set font_bold no
+set experiment_path "C:\\Users\\steenbergenhvan1\\Downloads"
+set disable_garbage_collection yes
+set description "The main experiment item"
+set coordinates uniform
+set compensation 0
+set color_backend psycho
+set clock_backend psycho
+set canvas_backend psycho
+set background black
+
+define sketchpad blank
+	set duration 200
+	set description "Displays stimuli"
+
+define loop block_loop
+	set source table
+	set repeat 4
+	set order random
+	set description "Repeatedly runs another item"
+	set cycles 8
+	set continuous no
+	set break_if_on_first yes
+	set break_if False
+	setcycle 0 word blue
+	setcycle 0 colour red
+	setcycle 0 congruent 0
+	setcycle 0 correct_resp_v1 1
+	setcycle 0 correct_resp_v2 3
+	setcycle 1 word red
+	setcycle 1 colour red
+	setcycle 1 congruent 1
+	setcycle 1 correct_resp_v1 1
+	setcycle 1 correct_resp_v2 3
+	setcycle 2 word red
+	setcycle 2 colour blue
+	setcycle 2 congruent 0
+	setcycle 2 correct_resp_v1 3
+	setcycle 2 correct_resp_v2 1
+	setcycle 3 word blue
+	setcycle 3 colour blue
+	setcycle 3 congruent 1
+	setcycle 3 correct_resp_v1 3
+	setcycle 3 correct_resp_v2 1
+	setcycle 4 word yellow
+	setcycle 4 colour yellow
+	setcycle 4 congruent 1
+	setcycle 4 correct_resp_v1 4
+	setcycle 4 correct_resp_v2 2
+	setcycle 5 word green
+	setcycle 5 colour yellow
+	setcycle 5 congruent 0
+	setcycle 5 correct_resp_v1 4
+	setcycle 5 correct_resp_v2 2
+	setcycle 6 word yellow
+	setcycle 6 colour green
+	setcycle 6 congruent 0
+	setcycle 6 correct_resp_v1 2
+	setcycle 6 correct_resp_v2 4
+	setcycle 7 word green
+	setcycle 7 colour green
+	setcycle 7 congruent 1
+	setcycle 7 correct_resp_v1 2
+	setcycle 7 correct_resp_v2 4
+	run trial_sequence
+
+define sketchpad end_experiment
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="The experiment has now finished. Press any key to exit." x=0 y=0 z_index=0
+
+define sequence experiment
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run welcome always
+	run instructions_v1 "[subject_parity] == \"even\""
+	run instructions_v2 "[subject_parity] == \"odd\""
+	run block_loop always
+	run end_experiment always
+
+define sketchpad fixation
+	set duration 500
+	set description "Displays stimuli"
+	draw fixdot color=white show_if=always style=default x=0 y=0 z_index=0
+
+define sketchpad instructions_v1
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=yes font_family=mono font_italic=no font_size=32 html=yes show_if=always text="Instructions:" x=0 y=-288 z_index=0
+	draw textline center=1 color=white font_bold=yes font_family=mono font_italic=no font_size=25 html=yes show_if=always text="In this task, you have to identify <br />the color of the font of the word presented.<br /><br />Press the following buttons <br />that correspond to the following colors:<br /><br />'1' for red<br /><br />'2' for green<br /><br />'3' for blue<br /><br />'4' for yellow<br /><br />Respond as fast and as accurate as possible.<br /><br />Press any key to start the task." x=0 y=32 z_index=0
+
+define sketchpad instructions_v2
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=yes font_family=mono font_italic=no font_size=32 html=yes show_if=always text="Instructions:" x=0 y=-288 z_index=0
+	draw textline center=1 color=white font_bold=yes font_family=mono font_italic=no font_size=25 html=yes show_if=always text="In this task, you have to identify <br />the color of the font of the word presented.<br /><br />Press the following buttons <br />that correspond to the following colors:<br /><br />'1' for blue<br /><br />'2' for yellow<br /><br />'3' for red<br /><br />'4' for green<br /><br />Respond as fast and as accurate as possible.<br /><br />Press any key to start the task." x=0 y=32 z_index=0
+
+define keyboard_response keyboard_response_v1
+	set timeout infinite
+	set flush yes
+	set event_type keypress
+	set duration keypress
+	set description "Collects keyboard responses"
+	set correct_response "[correct_resp_v1]"
+	set allowed_responses "1;2;3;4"
+
+define keyboard_response keyboard_response_v2
+	set timeout infinite
+	set flush yes
+	set event_type keypress
+	set duration keypress
+	set description "Collects keyboard responses"
+	set correct_response "[correct_resp_v2]"
+	set allowed_responses "1;2;3;4"
+
+define logger logger
+	set description "Logs experimental data"
+	set auto_log yes
+
+define sequence trial_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run fixation always
+	run word_v1 "[subject_parity] == \"even\""
+	run word_v2 "[subject_parity] == \"odd\""
+	run keyboard_response_v1 "[subject_parity] == \"even\""
+	run keyboard_response_v2 "[subject_parity] == \"odd\""
+	run blank always
+	run logger always
+
+define sketchpad welcome
+	set start_response_interval no
+	set reset_variables no
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="Welcome to the experiment!<br /><br />Press any key to begin." x=0 y=0 z_index=0
+
+define sketchpad word_v1
+	set duration 0
+	set description "Displays stimuli"
+	draw textline center=1 color="[colour]" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[word]" x=0 y=0 z_index=0
+	draw rect color=red fill=1 h=96 penwidth=1 show_if=always w=96 x=-384 y=160 z_index=0
+	draw rect color=green fill=1 h=96 penwidth=1 show_if=always w=96 x=-160 y=160 z_index=0
+	draw rect color=blue fill=1 h=96 penwidth=1 show_if=always w=96 x=64 y=160 z_index=0
+	draw rect color=yellow fill=1 h=96 penwidth=1 show_if=always w=96 x=288 y=160 z_index=0
+
+define sketchpad word_v2
+	set duration 0
+	set description "Displays stimuli"
+	draw textline center=1 color="[colour]" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[word]" x=0 y=0 z_index=0
+	draw rect color=blue fill=1 h=96 penwidth=1 show_if=always w=96 x=-384 y=160 z_index=0
+	draw rect color=yellow fill=1 h=96 penwidth=1 show_if=always w=96 x=-160 y=160 z_index=0
+	draw rect color=red fill=1 h=96 penwidth=1 show_if=always w=96 x=64 y=160 z_index=0
+	draw rect color=green fill=1 h=96 penwidth=1 show_if=always w=96 x=288 y=160 z_index=0
+
