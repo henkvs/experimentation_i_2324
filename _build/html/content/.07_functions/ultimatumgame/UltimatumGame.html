@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/.07_functions/ultimatumgame/UltimatumGame';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Chapter 8 - Loops" href="../../.08_loops/08_intro.html" />
+    <link rel="next" title="Optional Study Material - Python lessons: Functions" href="../functions_python_lessons.html" />
     <link rel="prev" title="Chapter 7 - Functions" href="../07_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -209,26 +209,36 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../.05_variables/gettingready_pythonsoftware.html">Installing Anaconda and how to run python code using this website</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../.05_variables/variables_python_exercises.html">Python exercises: Variables</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../../.05_variables/gettingready_python_lessons.html">Optional Study Material - Python lessons: Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../.05_variables/variables_python_lessons.html">Optional Study Material - Python lessons: Variables</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../.06_conditionals/06_intro.html">Chapter 6 - Conditionals</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../.06_conditionals/wcst.html">The Wisconsin Card Sorting Task in OpenSesame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../.06_conditionals/conditionals_python_lessons.html">Optional Study Material - Python lessons: Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../.06_conditionals/conditionals_python_exercises.html">Optional Study Material - Python exercises: Conditionals</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../07_intro.html">Chapter 7 - Functions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">The Ultimatum Game in OpenSesame</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../functions_python_lessons.html">Optional Study Material - Python lessons: Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functions_python_exercises.html">Optional Study Material - Python exercises: Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../.08_loops/08_intro.html">Chapter 8 - Loops</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../.08_loops/cyberball/Cyberball.html">The Cyberball game in OpenSesame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../.08_loops/loops_python_lessons.html">Optional Study Material - Python lessons: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../.08_loops/loops_python_exercises.html">Optional Study Material - Python exercises: Loops</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../.09_lists/09_intro.html">Chapter 9 - Strings and lists</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../.09_lists/digitspan/digitspan.html">Memory Span Task in OpenSesame</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../../.09_lists/strings_python_lessons.html">Optional Study Material - Python lessons: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../.09_lists/lists_python_lessons.html">Optional Study Material - Python lessons: Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../.09_lists/strings_python_exercises.html">Optional Study Material - Python exercises: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../.09_lists/lists_python_exercises.html">Optional Study Material - Python exercises: Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../.solutions_book/solutions.html">Solutions</a></li>
@@ -520,7 +530,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-results-and-running-the-experiment">Logging results and running the experiment</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-exercise-jittered-iti">Extra exercise: Jittered ITI</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-show-a-visual-countdown-timer">Exercise 1. Show a visual countdown timer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-jittered-duration-of-the-timer-advanced">Exercise 2. Jittered duration of the timer (advanced)</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -5371,9 +5385,52 @@ if (typeof version == 'undefined') {
 <p>Now you have a framework to test social decision making in humans. From here on you can tweak many variables depending on your hypothesis. Perhaps you are interested in more than just two options? And what will happen if Player 1 notices that Player 2 is very easy in accepting unfair decisions? Many possibilities to go to from, but you have a great basis to start from.</p>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="extra-exercise-jittered-iti">
-<h1>Extra exercise: Jittered ITI<a class="headerlink" href="#extra-exercise-jittered-iti" title="Permalink to this heading">#</a></h1>
-<p>The duration of how long you have to wait on the response of Player 2 is now fixed. Of course, a real person would not always take the same time to come up with a response. Instead of fixing the time the WaitingForOther sketchpad is shown, can you make it so that the waiting time is random (with a mean of e.g. 5 seconds)?</p>
+<section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
+<section id="exercise-1-show-a-visual-countdown-timer">
+<h2>Exercise 1. Show a visual countdown timer<a class="headerlink" href="#exercise-1-show-a-visual-countdown-timer" title="Permalink to this heading">#</a></h2>
+<p>Develop a visual countdown timer featuring a white circle that fills up with a red arc over time. Replace the <code class="docutils literal notranslate"><span class="pre">WaitingForOther</span></code> object with a <code class="docutils literal notranslate"><span class="pre">loop</span></code> object that executes a Python script. The loop should iterate the Python script 5 times. After drawing the Canvas the Python script will wait 1000 ms. With each iteration, the Python script gradually completes a larger portion of the circle until the 5 seconds have elapsed.</p>
+<p>You need to use the <a class="reference external" href="http://osdoc.cogsci.nl/manual/python/canvas">Canvas functions</a> in OpenSesame. There is no <code class="docutils literal notranslate"><span class="pre">arc</span></code> function available in OpenSesame to draw a pie. We therefore create our own class/function and use the work-around provided on the OpenSesame forum. This code uses the <code class="docutils literal notranslate"><span class="pre">Pie</span></code> function from <code class="docutils literal notranslate"><span class="pre">psychopy</span></code>. The code below gives you some basic code you can adapt yourself.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># arc solution from https://forum.cogsci.nl/discussion/7326/mixing-psychopy-and-canvas-elements</span>
+<span class="kn">from</span> <span class="nn">openexp._canvas._element.psycho</span> <span class="kn">import</span> <span class="n">PsychoElement</span>
+<span class="kn">from</span> <span class="nn">openexp._canvas._element.element</span> <span class="kn">import</span> <span class="n">Element</span>
+<span class="kn">from</span> <span class="nn">psychopy.visual</span> <span class="kn">import</span> <span class="n">Pie</span>
+
+<span class="k">class</span> <span class="nc">CustomElement</span><span class="p">(</span><span class="n">PsychoElement</span><span class="p">,</span> <span class="n">Element</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="mi">90</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extent</span> <span class="o">=</span> <span class="n">extent</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">prepare</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stim</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="c1">#fillColor in rgb values ranging from -1 to 1</span>
+            <span class="n">Pie</span><span class="p">(</span><span class="n">win</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mi">252</span><span class="p">,</span> <span class="n">fillColor</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">.5</span> <span class="p">],</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">0</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">_extent</span><span class="p">),</span>
+        <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">stim</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stim</span><span class="p">:</span>
+                <span class="n">stim</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+
+<span class="n">my_canvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">penwidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+
+<span class="n">my_canvas</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="o">-</span><span class="mi">250</span><span class="p">,</span><span class="o">-</span><span class="mi">250</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">my_canvas</span><span class="p">[</span><span class="s1">&#39;arc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CustomElement</span><span class="p">(</span><span class="n">my_canvas</span><span class="p">,</span> <span class="n">extent</span> <span class="o">=</span> <span class="mi">120</span><span class="p">)</span>
+<span class="c1"># my_canvas.ellipse(-200,-200,400,400,color=u&#39;white&#39;)</span>
+<span class="n">my_canvas</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">clock</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="c1">#wait 1000 ms</span>
+</pre></div>
+</div>
+</section>
+<section id="exercise-2-jittered-duration-of-the-timer-advanced">
+<h2>Exercise 2. Jittered duration of the timer (advanced)<a class="headerlink" href="#exercise-2-jittered-duration-of-the-timer-advanced" title="Permalink to this heading">#</a></h2>
+<p>The duration of how long you have to wait for the response of Player 2 is now fixed. Of course, a real person would not always take the same time to come up with a response. Therefore, jitter the duration of the countdown timer in each trial by aborting the loop randomly after 1, 2, 3, 4, or 5 loops.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -5416,11 +5473,11 @@ if (typeof version == 'undefined') {
       </div>
     </a>
     <a class="right-next"
-       href="../../.08_loops/08_intro.html"
+       href="../functions_python_lessons.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chapter 8 - Loops</p>
+        <p class="prev-next-title">Optional Study Material - Python lessons: Functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -5456,7 +5513,11 @@ if (typeof version == 'undefined') {
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-results-and-running-the-experiment">Logging results and running the experiment</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-exercise-jittered-iti">Extra exercise: Jittered ITI</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-show-a-visual-countdown-timer">Exercise 1. Show a visual countdown timer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-jittered-duration-of-the-timer-advanced">Exercise 2. Jittered duration of the timer (advanced)</a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>

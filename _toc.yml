@@ -44,5 +44,7 @@ chapters:
     - file: content/.09_lists/lists_python_lessons.ipynb
     - file: content/.09_lists/strings_python_exercises.ipynb
     - file: content/.09_lists/lists_python_exercises.ipynb
+  - file: content/.10_qa/09_intro.ipynb
+    sections:
+    - file: content/.10_qa/questionnaires/questionnaire.ipynb
   - file: content/.solutions_book/solutions.ipynb
-      - file: content/.10_qa/questionnaires/questionnaire.ipynb
