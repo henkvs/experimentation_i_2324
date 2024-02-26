@@ -1,6 +1,9 @@
 # Programming Psychological Experiments using  OpenSesame and python (academic year 2023-2024)
 
-This is work in progress. The material will be complete in April 2024.
+## Previous versions of this material course
+- [Course Material 2022-2023](https://jeshuat.github.io/Experimentation1/intro.html)
+
+**Welcome**
 
 Welcome to this JupyterBook, which provides the course material covered partially in the course [Experimentation I: Programming Psychological Experiments](https://studiegids.universiteitleiden.nl/en/courses/121581/experimentation-i-programming-psychological-experiments). This course is part of the [research master program in Psychology](https://www.universiteitleiden.nl/en/education/study-programmes/master/psychology-research) at [Leiden University](http://leidenuniv.nl/) in the Netherlands.
 
