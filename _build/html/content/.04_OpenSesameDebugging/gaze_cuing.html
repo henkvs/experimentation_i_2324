@@ -521,7 +521,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-express-the-location-of-the-cues-in-relative-terms">Exercise 1. Express the location of the cues in relative terms</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-track-the-number-of-trials-per-block">Exercise 2. Track the number of trials per block</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-add-a-progressbar-advanced">Exercise 3. Add a progressbar (advanced)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-calculate-a-running-average-of-the-accuracy">Exercise 3. Calculate a running average of the accuracy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-add-a-progressbar-advanced">Exercise 4. Add a progressbar (advanced)</a></li>
 </ul>
 </li>
 </ul>
@@ -572,10 +573,14 @@ document.write(`
 </section>
 <section id="exercise-2-track-the-number-of-trials-per-block">
 <h3>Exercise 2. Track the number of trials per block<a class="headerlink" href="#exercise-2-track-the-number-of-trials-per-block" title="Permalink to this heading">#</a></h3>
-<p>Count the total number of trials presented in each block by adding an inline script that increments itself with 1 at the end of each trial (i.e. var.TrialNumber = var.TrialNumber + 1). The first trial should get value 1. Make sure the counter resets for each block separately. Check using the variable inspect (while running OpenSesame in windowed mode) and in the log file whether the stored trial number is correct.</p>
+<p>Count the total number of trials presented in each block by adding an inline script that increments itself with 1 at the end of each trial (i.e. var.TrialCounter = var.TrialCounter + 1). The first trial should get value 1. Make sure the counter resets for each block separately. Check using the variable inspect (while running OpenSesame in windowed mode) and in the log file whether the stored trial number is correct.</p>
 </section>
-<section id="exercise-3-add-a-progressbar-advanced">
-<h3>Exercise 3. Add a progressbar (advanced)<a class="headerlink" href="#exercise-3-add-a-progressbar-advanced" title="Permalink to this heading">#</a></h3>
+<section id="exercise-3-calculate-a-running-average-of-the-accuracy">
+<h3>Exercise 3. Calculate a running average of the accuracy<a class="headerlink" href="#exercise-3-calculate-a-running-average-of-the-accuracy" title="Permalink to this heading">#</a></h3>
+<p>Now, add another counter that calculates the total number of correct trials using var.CorrectCounter = var.CorrectCounter + var.correct. Make sure this code is run AFTER the <code class="docutils literal notranslate"><span class="pre">experimental</span> <span class="pre">variable</span></code> var.correct has the correct value (i.e., you should add this inline after the response collection object). Calculate the running average by dividing the value of CorrectCounter by TrialCounter. Show this running average value on the screen by inserting a feedback object in the trial sequence.</p>
+</section>
+<section id="exercise-4-add-a-progressbar-advanced">
+<h3>Exercise 4. Add a progressbar (advanced)<a class="headerlink" href="#exercise-4-add-a-progressbar-advanced" title="Permalink to this heading">#</a></h3>
 <p>Now, let’s utilize the trial counter you created in Exercise 2 to incorporate a progress bar into the trials. The progress bar should consist of a horizontal white rectangle that gradually fills up from left to right using a red filled rectangle displayed on top of it. Additionally, include a column at the block level that indicates the total number of trials per block. To calculate the width of the red bar, divide the trial number by this total and multiply it by a constant. Make sure to reference this variable to adjust the width of the red bar (refer to the ‘w’ parameter of the red rectangle in the script view).</p>
 </section>
 </section>
@@ -648,7 +653,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-express-the-location-of-the-cues-in-relative-terms">Exercise 1. Express the location of the cues in relative terms</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-track-the-number-of-trials-per-block">Exercise 2. Track the number of trials per block</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-add-a-progressbar-advanced">Exercise 3. Add a progressbar (advanced)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-calculate-a-running-average-of-the-accuracy">Exercise 3. Calculate a running average of the accuracy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-add-a-progressbar-advanced">Exercise 4. Add a progressbar (advanced)</a></li>
 </ul>
 </li>
 </ul>

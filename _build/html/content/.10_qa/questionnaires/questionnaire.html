@@ -540,7 +540,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-create-a-striped-color-layout">Exercise 2. Create a striped color layout</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-make-the-code-more-compact">Exercise 3. Make the code more compact</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-radio-button-layout-advanced-level">Exercise 4. Radio-button layout (advanced level!)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-insert-the-countdown-timer-in-the-flanker-task">Exercise 5. Insert the countdown timer in the flanker task</a></li>
 </ul>
 </li>
 </ul>
@@ -6483,45 +6482,6 @@ if (typeof version == 'undefined') {
 <h3>Exercise 4. Radio-button layout (advanced level!)<a class="headerlink" href="#exercise-4-radio-button-layout-advanced-level" title="Permalink to this heading">#</a></h3>
 <p>Change the layout of the questionnaire, replacing the squares with radio-buttons (e.g. a big circle with a smaller circle that can be filled or not) next to the text.</p>
 </section>
-<section id="exercise-5-insert-the-countdown-timer-in-the-flanker-task">
-<h3>Exercise 5. Insert the countdown timer in the flanker task<a class="headerlink" href="#exercise-5-insert-the-countdown-timer-in-the-flanker-task" title="Permalink to this heading">#</a></h3>
-<p>Open your solution to Exercise 1 of the Eriksen flanker task tutorial (chapter 3) in OpenSesame and replace the 30-seconds break between the test blocks by the animated countdown timer you created during today’s python Exercise 2.</p>
-<p>Note that you have to use slightly different Canvas functions in OpenSesame. Also the coordinate system is different. The <code class="docutils literal notranslate"><span class="pre">arc</span></code> function is not available in OpenSesame and as a work-around we use a solution provided on the OpenSesame forum that uses the <code class="docutils literal notranslate"><span class="pre">Pie</span></code> function from <code class="docutils literal notranslate"><span class="pre">psychopy</span></code>. The code below gives you some basic code you can adapt yourself.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># arc solution from https://forum.cogsci.nl/discussion/7326/mixing-psychopy-and-canvas-elements</span>
-<span class="kn">from</span> <span class="nn">openexp._canvas._element.psycho</span> <span class="kn">import</span> <span class="n">PsychoElement</span>
-<span class="kn">from</span> <span class="nn">openexp._canvas._element.element</span> <span class="kn">import</span> <span class="n">Element</span>
-<span class="kn">from</span> <span class="nn">psychopy.visual</span> <span class="kn">import</span> <span class="n">Pie</span>
-
-<span class="k">class</span> <span class="nc">CustomElement</span><span class="p">(</span><span class="n">PsychoElement</span><span class="p">,</span> <span class="n">Element</span><span class="p">):</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="mi">90</span><span class="p">):</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_extent</span> <span class="o">=</span> <span class="n">extent</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">prepare</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_stim</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="c1">#fillColor in rgb values ranging from -1 to 1</span>
-            <span class="n">Pie</span><span class="p">(</span><span class="n">win</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mi">252</span><span class="p">,</span> <span class="n">fillColor</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">.5</span> <span class="p">],</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">0</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">_extent</span><span class="p">),</span>
-        <span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">stim</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stim</span><span class="p">:</span>
-                <span class="n">stim</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-
-
-<span class="n">my_canvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">penwidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
-
-<span class="n">my_canvas</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="o">-</span><span class="mi">250</span><span class="p">,</span><span class="o">-</span><span class="mi">250</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">my_canvas</span><span class="p">[</span><span class="s1">&#39;arc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CustomElement</span><span class="p">(</span><span class="n">my_canvas</span><span class="p">,</span> <span class="n">extent</span> <span class="o">=</span> <span class="mi">120</span><span class="p">)</span>
-<span class="n">my_canvas</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
-<span class="n">my_canvas</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</section>
 </section>
 </section>
 
@@ -6611,7 +6571,6 @@ if (typeof version == 'undefined') {
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-create-a-striped-color-layout">Exercise 2. Create a striped color layout</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-make-the-code-more-compact">Exercise 3. Make the code more compact</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-radio-button-layout-advanced-level">Exercise 4. Radio-button layout (advanced level!)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-insert-the-countdown-timer-in-the-flanker-task">Exercise 5. Insert the countdown timer in the flanker task</a></li>
 </ul>
 </li>
 </ul>
