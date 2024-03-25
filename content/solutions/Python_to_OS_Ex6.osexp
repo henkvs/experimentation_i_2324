@@ -1,0 +1,89 @@
+---
+API: 2.1
+OpenSesame: 3.3.12
+Platform: nt
+---
+set width 1024
+set uniform_coordinates yes
+set title "New experiment"
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set round_decimals 2
+set height 768
+set fullscreen no
+set form_clicks no
+set foreground white
+set font_underline no
+set font_size 18
+set font_italic no
+set font_family mono
+set font_bold no
+set experiment_path "C:\\Users\\Gebruiker\\Documents\\Teaching_AY2223_S2\\Experimentation\\OpenSesame_Exercises"
+set disable_garbage_collection yes
+set description "The main experiment item"
+set coordinates uniform
+set compensation 0
+set canvas_backend psycho
+set background black
+
+define form_text_input enter_pc
+	set timeout infinite
+	set spacing 10
+	set rows "1;1;6"
+	set only_render no
+	set margins "50;50;50;50"
+	set form_var pc
+	set form_title Title
+	set form_question "Enter average accuracy score as proportion (between 0 and 1):"
+	set description "A simple text input form"
+	set cols 1
+	set _theme gray
+	widget 0 0 1 1 label text="[form_title]"
+	widget 0 1 1 1 label center=no text="[form_question]"
+	widget 0 2 1 1 text_input focus=yes return_accepts=yes stub="" var="[form_var]"
+
+
+define form_text_input enter_rt
+	set timeout infinite
+	set spacing 10
+	set rows "1;1;6"
+	set only_render no
+	set margins "50;50;50;50"
+	set form_var rt
+	set form_title Title
+	set form_question "Enter average reaction time value in ms (between 1 and 2000 ms):"
+	set description "A simple text input form"
+	set cols 1
+	set _theme gray
+	widget 0 0 1 1 label text="[form_title]"
+	widget 0 1 1 1 label center=no text="[form_question]"
+	widget 0 2 1 1 text_input focus=yes return_accepts=yes stub="" var="[form_var]"
+
+
+define sequence experiment
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run enter_rt always
+	run enter_pc always
+	run inverse_efficiency_score_calculation always
+	run feedback always
+
+define feedback feedback
+	set reset_variables yes
+	set duration keypress
+	set description "Provides feedback to the participant"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=18 html=yes show_if=always text="When combining an RT of [rt] ms and <br />an ACC of [pc] (= [pe]% errors), <br />the IES score is [ies] ms." x=0 y=0 z_index=0
+
+define inline_script inverse_efficiency_score_calculation
+	set description "Executes Python code"
+	___run__
+	var.pe = round(float((1 - var.pc) * 100), 2) # proportion of errors calculation
+	var.ies = int(var.rt/var.pc) # inverse efficiency score calculation
+	__end__
+	set _prepare "import math"
+

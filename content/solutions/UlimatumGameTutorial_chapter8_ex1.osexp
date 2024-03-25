@@ -1,0 +1,200 @@
+---
+API: 2.1
+OpenSesame: 3.3.12
+Platform: nt
+---
+set width 1024
+set uniform_coordinates yes
+set title "New experiment"
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set sampler_backend psycho
+set round_decimals 2
+set mouse_backend psycho
+set keyboard_backend psycho
+set height 768
+set fullscreen no
+set form_clicks no
+set foreground white
+set font_underline no
+set font_size 18
+set font_italic no
+set font_family mono
+set font_bold no
+set experiment_path "C:\\Users\\Gebruiker\\Documents\\Teaching_AY2223_S2\\Experimentation\\OpenSesame_Exercises\\s4_ug"
+set disable_garbage_collection yes
+set description "The main experiment item"
+set coordinates uniform
+set compensation 0
+set color_backend psycho
+set clock_backend psycho
+set canvas_backend psycho
+set background grey
+
+define sketchpad AcceptOffer
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=25 html=yes show_if=always text="Player 2 accepted the offer." x=0 y=0 z_index=0
+
+define sketchpad DecisionMe
+	set duration 0
+	set description "Displays stimuli"
+	draw rect color="#ffff00" fill=1 h=224 penwidth=1 show_if=always w=384 x=64 y=-96 z_index=4
+	draw rect color="#ffff00" fill=1 h=224 penwidth=1 show_if=always w=384 x=-448 y=-96 z_index=3
+	draw rect color=white fill=1 h=64 penwidth=1 show_if=always w=640 x=-320 y=-224 z_index=1
+	draw textline center=1 color=black font_bold=yes font_family=mono font_italic=no font_size=20 html=yes show_if=always text="Please choose your offer (press key 1 or 2)" x=0 y=-192 z_index=0
+	draw textline center=1 color=black font_bold=yes font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Offer 1: <br />[O1_Me] for me<br />[O1_You] for the other player" x=-256 y=0 z_index=0
+	draw textline center=1 color=black font_bold=yes font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Offer 2: <br />[O2_Me] for me<br />[O2_You] for the other player" x=256 y=0 z_index=0
+
+define sketchpad DecisionMe_feedback1
+	set duration keypress
+	set description "Displays stimuli"
+	draw rect color="#ffff00" fill=1 h=224 penwidth=1 show_if=always w=384 x=64 y=-96 z_index=4
+	draw rect color="#ffff00" fill=1 h=224 penwidth=1 show_if=always w=384 x=-448 y=-96 z_index=3
+	draw rect color=white fill=1 h=64 penwidth=1 show_if=always w=640 x=-320 y=-224 z_index=1
+	draw textline center=1 color=black font_bold=yes font_family=mono font_italic=no font_size=20 html=yes show_if=always text="Please choose your offer (press key 1 or 2)" x=0 y=-192 z_index=0
+	draw textline center=1 color=black font_bold=yes font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Offer 1: <br />[O1_Me] for me<br />[O1_You] for the other player" x=-256 y=0 z_index=0
+	draw textline center=1 color=black font_bold=yes font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Offer 2: <br />[O2_Me] for me<br />[O2_You] for the other player" x=256 y=0 z_index=0
+	draw rect color="#aa0000" fill=0 h=224 penwidth=5 show_if=always w=384 x=-448 y=-96 z_index=0
+
+define sketchpad DecisionMe_feedback2
+	set duration keypress
+	set description "Displays stimuli"
+	draw rect color="#ffff00" fill=1 h=224 penwidth=1 show_if=always w=384 x=64 y=-96 z_index=4
+	draw rect color="#ffff00" fill=1 h=224 penwidth=1 show_if=always w=384 x=-448 y=-96 z_index=3
+	draw rect color=white fill=1 h=64 penwidth=1 show_if=always w=640 x=-320 y=-224 z_index=1
+	draw textline center=1 color=black font_bold=yes font_family=mono font_italic=no font_size=20 html=yes show_if=always text="Please choose your offer (press key 1 or 2)" x=0 y=-192 z_index=0
+	draw textline center=1 color=black font_bold=yes font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Offer 1: <br />[O1_Me] for me<br />[O1_You] for the other player" x=-256 y=0 z_index=0
+	draw textline center=1 color=black font_bold=yes font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Offer 2: <br />[O2_Me] for me<br />[O2_You] for the other player" x=256 y=0 z_index=0
+	draw rect color="#aa0000" fill=0 h=224 penwidth=5 show_if=always w=384 x=64 y=-96 z_index=0
+
+define logger LogTrials
+	set description "Logs experimental data"
+	set auto_log yes
+
+define keyboard_response OfferChoice
+	set timeout infinite
+	set flush yes
+	set event_type keypress
+	set duration keypress
+	set description "Collects keyboard responses"
+	set allowed_responses "1;2"
+
+define inline_script OtherDecision
+	set description "Executes Python code"
+	___run__
+	if var.response == var.Fair_Offer:
+	    var.choice = choices(decision, weights=(80, 20), k=1)
+	else:
+	    var.choice = choices(decision, weights=(25, 75), k=1)
+	__end__
+	___prepare__
+	from random import choices
+	
+	decision = ["Accept", "Reject"]
+	__end__
+
+define inline_script Pie_countdown
+	set description "Executes Python code"
+	___run__
+	# arc solution from https://forum.cogsci.nl/discussion/7326/mixing-psychopy-and-canvas-elements
+	from openexp._canvas._element.psycho import PsychoElement
+	from openexp._canvas._element.element import Element
+	from psychopy.visual import Pie
+	
+	class CustomElement(PsychoElement, Element):
+	
+	    def __init__(self, canvas, extent=90):
+	
+	        self._extent = extent
+	        super().__init__(canvas)
+	
+	    def prepare(self):
+	
+	        self._stim = [
+	            #fillColor in rgb values ranging from -1 to 1
+	            Pie(win, radius=252, fillColor=[-.5, -.5, -.5 ], start=0, end=0-self._extent),
+	        ]
+	
+	    def show(self):
+	
+	        if self.visible:
+	            for stim in self._stim:
+	                stim.draw()
+	
+	# The loop below creates a countdown timer that divides the pie to 10 equal portions. 
+	# Every portion covered is updated every 500 ms. 
+	
+	for var.degreescovered in range(360, 0, -360//10):
+	    my_canvas = Canvas(penwidth = 1, fill = True, color = u'white')
+	    
+	    
+	    my_canvas.ellipse(-250,-250,500,500,color=u'red')
+	    my_canvas['arc'] = CustomElement(my_canvas, extent = var.degreescovered)
+	    my_canvas.show()
+	    clock.sleep(500) #wait 500 ms
+	__end__
+	set _prepare ""
+
+define sketchpad RejectOffer
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=25 html=yes show_if=always text="Player 2 rejected the offer." x=0 y=0 z_index=0
+
+define loop block_loop
+	set source_file ""
+	set source table
+	set repeat 1
+	set order random
+	set description "Repeatedly runs another item"
+	set cycles 2
+	set continuous no
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 O1_Me 5
+	setcycle 0 O1_You 5
+	setcycle 0 O2_Me 7
+	setcycle 0 O2_You 3
+	setcycle 0 Fair_Offer 1
+	setcycle 1 O1_Me 7
+	setcycle 1 O1_You 3
+	setcycle 1 O2_Me 5
+	setcycle 1 O2_You 5
+	setcycle 1 Fair_Offer 2
+	run trial_sequence
+
+define sequence experiment
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run welcome always
+	run instructions always
+	run block_loop always
+
+define sketchpad instructions
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=25 html=yes show_if=always text="In this game, you are randomly assigned as player 1, while the other participant next door as player 2. <br /><br />As player 1, you will be given money that you can share with player 2. However, you may decide on how to divide the amount of money and offer this to player 2. The other player can accept or reject your offer. <br /><br />Press any key to continue." x=0 y=0 z_index=0
+
+define sequence trial_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run DecisionMe always
+	run OfferChoice always
+	run DecisionMe_feedback1 "[response] = 1"
+	run DecisionMe_feedback2 "[response] = 2"
+	run Pie_countdown always
+	run OtherDecision always
+	run AcceptOffer "[choice] = ['Accept']"
+	run RejectOffer "[choice] = ['Reject']"
+	run LogTrials always
+
+define sketchpad welcome
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=25 html=yes show_if=always text="Welcome to the experiment!<br /><br />In this study, you will be playing a decision-making game with another participant in the other room. This task will be implented via the internet to allow both of you to play the game.<br /><br />press any key to start." x=0 y=0 z_index=0
+
