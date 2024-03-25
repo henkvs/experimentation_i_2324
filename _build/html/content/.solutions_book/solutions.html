@@ -635,7 +635,6 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-python-exercises-multiplication-table">Extra Python exercises: Multiplication Table</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-10-q-a">Chapter 10 - Q&amp;A</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questionnaires-in-opensesame">Questionnaires in OpenSesame</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-update-the-ok-button-earlier">Exercise 1. Update the OK button earlier</a></li>
@@ -647,6 +646,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opensesame-solutions-extra-exercises">OpenSesame solutions - extra exercises</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-python-exercises-multiplication-table">Extra Python exercises: Multiplication Table</a></li>
 </ul>
 
             </nav>
@@ -1787,6 +1787,67 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </section>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="chapter-10-q-a">
+<h1>Chapter 10 - Q&amp;A<a class="headerlink" href="#chapter-10-q-a" title="Permalink to this heading">#</a></h1>
+<section id="questionnaires-in-opensesame">
+<h2>Questionnaires in OpenSesame<a class="headerlink" href="#questionnaires-in-opensesame" title="Permalink to this heading">#</a></h2>
+<p>solution can be found <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Questionnaire_solution1.osexp">here</a></p>
+<section id="exercise-1-update-the-ok-button-earlier">
+<h3>Exercise 1. Update the OK button earlier<a class="headerlink" href="#exercise-1-update-the-ok-button-earlier" title="Permalink to this heading">#</a></h3>
+<p>TODO</p>
+</section>
+<section id="exercise-2-create-a-striped-color-layout">
+<h3>Exercise 2. Create a striped color layout<a class="headerlink" href="#exercise-2-create-a-striped-color-layout" title="Permalink to this heading">#</a></h3>
+<p>solution can be found <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Questionnaire_solution1.osexp">here</a></p>
+</section>
+<section id="exercise-3-make-the-code-more-compact">
+<h3>Exercise 3. Make the code more compact<a class="headerlink" href="#exercise-3-make-the-code-more-compact" title="Permalink to this heading">#</a></h3>
+<p>TODO</p>
+</section>
+<section id="exercise-4-radio-button-layout-advanced-level">
+<h3>Exercise 4. Radio-button layout (advanced level!)<a class="headerlink" href="#exercise-4-radio-button-layout-advanced-level" title="Permalink to this heading">#</a></h3>
+<p>TODO</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="opensesame-solutions-extra-exercises">
+<h1>OpenSesame solutions - extra exercises<a class="headerlink" href="#opensesame-solutions-extra-exercises" title="Permalink to this heading">#</a></h1>
+<p>Solution Exercise 1 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex1.osexp">link</a></p>
+<p>Solution Exercise 2 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex2.osexp">link</a></p>
+<p>Solution Exercise 3 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex3.osexp">link</a></p>
+<p>Solution Exercise 4 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex4.osexp">link</a></p>
+<p>Solution Exercise 5 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex5.osexp">link</a></p>
+<p>Below is an <strong>Alternative</strong> approach to “performance_contingent_smiley” script in Exercises 3-5. The objective of the script is:</p>
+<ol class="arabic simple">
+<li><p>Show Pos smiley when response is correct and &lt;=500ms.</p></li>
+<li><p>Show Neutral smiley when response is correct but slow (&gt;500ms).</p></li>
+<li><p>Show Negative stimuli when response is incorrect, or in the absense of a response (‘too late’ as written in the PDF).</p></li>
+</ol>
+<p>Unlike in the solution uploaded above, it is usually <strong>better to avoid comparisons with RTs</strong> to look for missing responses.</p>
+<ul class="simple">
+<li><p>Always go for checking missed responses directly like <code class="docutils literal notranslate"><span class="pre">var.response_keyboard_response</span> <span class="pre">!='None'</span></code>.</p></li>
+<li><p>Sticking to RT checks is error prone. If you change the time allowed for the response elsewhere in the experiment (may be to debug or pilot the experiment), you might have to change the way you detect missed responses too.</p></li>
+<li><p>Different software use different RTs for missed responses. RT for missed responses is 0 in Eprime, ‘[ ]’ in Psychopy, or a few microsenconds higher than max limit of the keyboard object (around 1000.50ms in this experiment).</p></li>
+</ul>
+<p>Hence the following code is recommended as a form of best practice.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">var</span><span class="o">.</span><span class="n">response_keyboard_response</span> <span class="o">!=</span><span class="s1">&#39;None&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">var</span><span class="o">.</span><span class="n">correct</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">var</span><span class="o">.</span><span class="n">response_time_keyboard_response</span> <span class="o">&lt;=</span> <span class="mi">500</span><span class="p">:</span>
+        <span class="n">var</span><span class="o">.</span><span class="n">smiley</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#positive</span>
+        <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">+</span> <span class="mi">20</span>
+    <span class="k">elif</span> <span class="n">var</span><span class="o">.</span><span class="n">correct</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">var</span><span class="o">.</span><span class="n">response_time_keyboard_response</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
+        <span class="n">var</span><span class="o">.</span><span class="n">smiley</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">#neutral</span>
+        <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">+</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">var</span><span class="o">.</span><span class="n">smiley</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#negative</span>
+        <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">-</span> <span class="mi">20</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">var</span><span class="o">.</span><span class="n">smiley</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#negative</span>
+    <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">-</span> <span class="mi">20</span>
+
+
+</pre></div>
+</div>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="extra-python-exercises-multiplication-table">
 <h1>Extra Python exercises: Multiplication Table<a class="headerlink" href="#extra-python-exercises-multiplication-table" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
@@ -1976,67 +2037,6 @@ Correct!
 Correct!
 Your score is 83.33333333333334%</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="chapter-10-q-a">
-<h1>Chapter 10 - Q&amp;A<a class="headerlink" href="#chapter-10-q-a" title="Permalink to this heading">#</a></h1>
-<section id="questionnaires-in-opensesame">
-<h2>Questionnaires in OpenSesame<a class="headerlink" href="#questionnaires-in-opensesame" title="Permalink to this heading">#</a></h2>
-<p>solution can be found <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Questionnaire_solution1.osexp">here</a></p>
-<section id="exercise-1-update-the-ok-button-earlier">
-<h3>Exercise 1. Update the OK button earlier<a class="headerlink" href="#exercise-1-update-the-ok-button-earlier" title="Permalink to this heading">#</a></h3>
-<p>TODO</p>
-</section>
-<section id="exercise-2-create-a-striped-color-layout">
-<h3>Exercise 2. Create a striped color layout<a class="headerlink" href="#exercise-2-create-a-striped-color-layout" title="Permalink to this heading">#</a></h3>
-<p>solution can be found <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Questionnaire_solution1.osexp">here</a></p>
-</section>
-<section id="exercise-3-make-the-code-more-compact">
-<h3>Exercise 3. Make the code more compact<a class="headerlink" href="#exercise-3-make-the-code-more-compact" title="Permalink to this heading">#</a></h3>
-<p>TODO</p>
-</section>
-<section id="exercise-4-radio-button-layout-advanced-level">
-<h3>Exercise 4. Radio-button layout (advanced level!)<a class="headerlink" href="#exercise-4-radio-button-layout-advanced-level" title="Permalink to this heading">#</a></h3>
-<p>TODO</p>
-</section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="opensesame-solutions-extra-exercises">
-<h1>OpenSesame solutions - extra exercises<a class="headerlink" href="#opensesame-solutions-extra-exercises" title="Permalink to this heading">#</a></h1>
-<p>Solution Exercise 1 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex1.osexp">link</a></p>
-<p>Solution Exercise 2 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex2.osexp">link</a></p>
-<p>Solution Exercise 3 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex3.osexp">link</a></p>
-<p>Solution Exercise 4 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex4.osexp">link</a></p>
-<p>Solution Exercise 5 <a class="reference external" href="https://downgit.github.io/#/home?url=https://github.com/henkvs/experimentation_i_2324/blob/main/content/solutions/Extra_OS_ex5.osexp">link</a></p>
-<p>Below is an <strong>Alternative</strong> approach to “performance_contingent_smiley” script in Exercises 3-5. The objective of the script is:</p>
-<ol class="arabic simple">
-<li><p>Show Pos smiley when response is correct and &lt;=500ms.</p></li>
-<li><p>Show Neutral smiley when response is correct but slow (&gt;500ms).</p></li>
-<li><p>Show Negative stimuli when response is incorrect, or in the absense of a response (‘too late’ as written in the PDF).</p></li>
-</ol>
-<p>Unlike in the solution uploaded above, it is usually <strong>better to avoid comparisons with RTs</strong> to look for missing responses.</p>
-<ul class="simple">
-<li><p>Always go for checking missed responses directly like <code class="docutils literal notranslate"><span class="pre">var.response_keyboard_response</span> <span class="pre">!='None'</span></code>.</p></li>
-<li><p>Sticking to RT checks is error prone. If you change the time allowed for the response elsewhere in the experiment (may be to debug or pilot the experiment), you might have to change the way you detect missed responses too.</p></li>
-<li><p>Different software use different RTs for missed responses. RT for missed responses is 0 in Eprime, ‘[ ]’ in Psychopy, or a few microsenconds higher than max limit of the keyboard object (around 1000.50ms in this experiment).</p></li>
-</ul>
-<p>Hence the following code is recommended as a form of best practice.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">var</span><span class="o">.</span><span class="n">response_keyboard_response</span> <span class="o">!=</span><span class="s1">&#39;None&#39;</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">var</span><span class="o">.</span><span class="n">correct</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">var</span><span class="o">.</span><span class="n">response_time_keyboard_response</span> <span class="o">&lt;=</span> <span class="mi">500</span><span class="p">:</span>
-        <span class="n">var</span><span class="o">.</span><span class="n">smiley</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#positive</span>
-        <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">+</span> <span class="mi">20</span>
-    <span class="k">elif</span> <span class="n">var</span><span class="o">.</span><span class="n">correct</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">var</span><span class="o">.</span><span class="n">response_time_keyboard_response</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
-        <span class="n">var</span><span class="o">.</span><span class="n">smiley</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">#neutral</span>
-        <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">+</span> <span class="mi">0</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">var</span><span class="o">.</span><span class="n">smiley</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#negative</span>
-        <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">-</span> <span class="mi">20</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">var</span><span class="o">.</span><span class="n">smiley</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#negative</span>
-    <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">totalPoints</span> <span class="o">-</span> <span class="mi">20</span>
-
-
-</pre></div>
-</div>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2210,7 +2210,6 @@ Your score is 83.33333333333334%</p>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-python-exercises-multiplication-table">Extra Python exercises: Multiplication Table</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-10-q-a">Chapter 10 - Q&amp;A</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questionnaires-in-opensesame">Questionnaires in OpenSesame</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-update-the-ok-button-earlier">Exercise 1. Update the OK button earlier</a></li>
@@ -2222,6 +2221,7 @@ Your score is 83.33333333333334%</p>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opensesame-solutions-extra-exercises">OpenSesame solutions - extra exercises</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-python-exercises-multiplication-table">Extra Python exercises: Multiplication Table</a></li>
 </ul>
 
   </nav></div>
