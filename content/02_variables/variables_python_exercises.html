@@ -1,0 +1,783 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python exercises: Variables &#8212; Experimentation 1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/02_variables/variables_python_exercises';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Experimentation 1 - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Experimentation 1 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Programming Psychological Experiments using  OpenSesame and python (academic year 2023-2024)
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.01_OpenSesameIntro/01_intro.html">Chapter 1 - Introduction to OpenSesame</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.01_OpenSesameIntro/gettingready_software.html">Install OpenSesame on your device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.01_OpenSesameIntro/conflict_tasks_Stroop.html">Stroop task in OpenSesame</a></li>
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.02_OpenSesameExpDesignI/02_intro.html">Chapter 2 - Experimental Design I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.02_OpenSesameExpDesignI/conflict_tasks_flanker.html">Flanker task in OpenSesame</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.03_OpenSesameExpDesignII/03_intro.html">Chapter 3 - Experimental Design II</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.03_OpenSesameExpDesignII/conflict_tasks_gonogo.html">Go-nogo task in OpenSesame</a></li>
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.04_OpenSesameDebugging/04_intro.html">Chapter 4 - Variables (in OpenSesame)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.04_OpenSesameDebugging/gaze_cuing.html">Gaze cuing task in OpenSesame</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.05_variables/05_intro.html">Chapter 5 - Variables (in python)</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.05_variables/gettingready_pythonsoftware.html">Installing Anaconda and how to run python code using this website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.05_variables/variables_python_exercises.html">Python exercises: Variables</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../.05_variables/gettingready_python_lessons.html">Optional Study Material - Python lessons: Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.05_variables/variables_python_lessons.html">Optional Study Material - Python lessons: Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.06_conditionals/06_intro.html">Chapter 6 - Conditionals</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.06_conditionals/wcst.html">The Wisconsin Card Sorting Task in OpenSesame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.06_conditionals/conditionals_python_lessons.html">Optional Study Material - Python lessons: Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.06_conditionals/conditionals_python_exercises.html">Optional Study Material - Python exercises: Conditionals</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.07_functions/07_intro.html">Chapter 7 - Functions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.07_functions/ultimatumgame/UltimatumGame.html">The Ultimatum Game in OpenSesame</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../.07_functions/functions_python_lessons.html">Optional Study Material - Python lessons: Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.07_functions/functions_python_exercises.html">Optional Study Material - Python exercises: Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.08_loops/08_intro.html">Chapter 8 - Loops</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.08_loops/cyberball/Cyberball.html">The Cyberball game in OpenSesame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.08_loops/loops_python_lessons.html">Optional Study Material - Python lessons: Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.08_loops/loops_python_exercises.html">Optional Study Material - Python exercises: Loops</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.09_lists/09_intro.html">Chapter 9 - Strings and lists</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.09_lists/digitspan/digitspan.html">Memory Span Task in OpenSesame</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../.09_lists/strings_python_lessons.html">Optional Study Material - Python lessons: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.09_lists/lists_python_lessons.html">Optional Study Material - Python lessons: Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.09_lists/strings_python_exercises.html">Optional Study Material - Python exercises: Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../.09_lists/lists_python_exercises.html">Optional Study Material - Python exercises: Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../.10_qa/10_intro.html">Chapter 10 - Q&amp;A</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../.10_qa/questionnaires/questionnaire.html">Optional: Questionnaires in OpenSesame</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../.solutions_book/solutions.html">Solutions</a></li>
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/henkvs/experimentation_i_2324/main?urlpath=tree/content/02_variables/variables_python_exercises.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/henkvs/experimentation_i_2324/blob/main/content/02_variables/variables_python_exercises.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/henkvs/experimentation_i_2324" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/henkvs/experimentation_i_2324/edit/main/content/02_variables/variables_python_exercises.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/henkvs/experimentation_i_2324/issues/new?title=Issue%20on%20page%20%2Fcontent/02_variables/variables_python_exercises.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/02_variables/variables_python_exercises.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python exercises: Variables</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python exercises: Variables</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-print-welcome-text">Exercise 1. Print welcome text</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-compute-gross-pay">Exercise 2. Compute gross pay</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-numeric-calculations">Exercise 3. Numeric calculations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-convert-temperature">Exercise 4. Convert temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-convert-reaction-time">Exercise 5. Convert reaction time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-combine-reaction-time-and-accuracy-information">Exercise 6. Combine reaction time and accuracy information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-saving-and-loading-the-jupyter-notebook">Exercise 7. Saving and loading the jupyter notebook</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-exercises-variables">
+<h1>Python exercises: Variables<a class="headerlink" href="#python-exercises-variables" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div><p><strong>Note:</strong> Some of the exercises below are adapted from the <a class="reference external" href="https://www.py4e.com/html3/02-variables">Python for Everyone Course</a> by Charles R. Severance licensed under Creative Commons Attribution 3.0</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Note</strong>: For these exercises you will need to launch the page using Google Colab.</p>
+</div></blockquote>
+<section id="exercise-1-print-welcome-text">
+<h2>Exercise 1. Print welcome text<a class="headerlink" href="#exercise-1-print-welcome-text" title="Permalink to this heading">#</a></h2>
+<p>Write a program that uses input to prompt a user for their name and then welcomes them.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">your</span> <span class="n">name</span><span class="p">:</span> <span class="n">Chuck</span>
+<span class="n">Hello</span> <span class="n">Chuck</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-2-compute-gross-pay">
+<h2>Exercise 2. Compute gross pay<a class="headerlink" href="#exercise-2-compute-gross-pay" title="Permalink to this heading">#</a></h2>
+<p>Write a program to prompt the user for hours and rate per hour to compute gross pay.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">Hours</span><span class="p">:</span> <span class="mi">35</span>
+<span class="n">Enter</span> <span class="n">Rate</span><span class="p">:</span> <span class="mf">2.75</span>
+<span class="n">Pay</span><span class="p">:</span> <span class="mf">96.25</span>
+</pre></div>
+</div>
+<p>We won’t worry about making sure our pay has exactly two digits after the decimal place for now. If you want, you can play with the built-in Python round function to properly round the resulting pay to two decimal places.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-3-numeric-calculations">
+<h2>Exercise 3. Numeric calculations<a class="headerlink" href="#exercise-3-numeric-calculations" title="Permalink to this heading">#</a></h2>
+<p>Assume that we execute the following assignment statements:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mf">12.0</span>
+</pre></div>
+</div>
+<p>For each of the following expressions, write the value of the expression and the type (of the value of the expression).</p>
+<p>width//2</p>
+<p>width/2.0</p>
+<p>height/3</p>
+<p>1 + 2 * 5</p>
+<p>Use the Python interpreter to check your answers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-4-convert-temperature">
+<h2>Exercise 4. Convert temperature<a class="headerlink" href="#exercise-4-convert-temperature" title="Permalink to this heading">#</a></h2>
+<p>Write a program which prompts the user for a Celsius temperature, convert the temperature to Fahrenheit, and print out the converted temperature.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">temperature</span> <span class="ow">in</span> <span class="n">Celsius</span><span class="p">:</span> <span class="mi">25</span>
+<span class="n">Temperature</span> <span class="ow">in</span> <span class="n">Fahrenheit</span><span class="p">:</span> <span class="mf">77.0</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-5-convert-reaction-time">
+<h2>Exercise 5. Convert reaction time<a class="headerlink" href="#exercise-5-convert-reaction-time" title="Permalink to this heading">#</a></h2>
+<p>Write a program which prompts the user for a certain reaction time value in milliseconds (between 1 and 2000 ms). Assume we want to apply a transformation of this value to correct for the skewed distribution of reaction time (in later chapters you will learn how to transform multiple values at once). Calculate the following two measures:</p>
+<ul class="simple">
+<li><p>Inverse RT: RTinv = -1000 / RT</p></li>
+<li><p>Logarithm of RT: RTlog = log(RT)</p></li>
+</ul>
+<p>Make sure your round both values to two decimals. Example of expected behavior:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">reaction</span> <span class="n">time</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">ms</span> <span class="p">(</span><span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">2000</span> <span class="n">ms</span><span class="p">):</span> <span class="mi">987</span>
+<span class="n">Inverse</span> <span class="n">RT</span> <span class="ow">is</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.01</span><span class="p">;</span> <span class="n">Log</span> <span class="n">RT</span> <span class="ow">is</span><span class="p">:</span> <span class="mf">6.89</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>For the log transformation, you will need the in-built mathematics package called “math”. We import math in the code below for you. To log-transform a numeric variable, you can call the <strong>math.log(variable)</strong> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#your code here</span>
+<span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-6-combine-reaction-time-and-accuracy-information">
+<h2>Exercise 6. Combine reaction time and accuracy information<a class="headerlink" href="#exercise-6-combine-reaction-time-and-accuracy-information" title="Permalink to this heading">#</a></h2>
+<p>Write a program which prompts the user for a certain average reaction time value in milliseconds (between 1 and 2000 ms) and an average accuracy score (as proportion correct scores, ranging from 0 to 1). Combine these measure to a single score called the inverse accuracy score.</p>
+<p>Bruyer and Brysbaert (2011, p.6) explain how to calculate the inverse efficiency score (note that PE means proportion of errors):</p>
+<blockquote>
+<div><p>To deal with the issue of how to combine speed and error, Townsend and Ashby (1978) proposed the “inverse efficiency score” (IES; see also Townsend &amp; Ashby, 1983). IES can be thought of as an observable measure that gauges the average energy consumed by the system over time (or the power of the system; Townsend &amp; Ashby, 1983, p. 204). It consists of RT divided by 1 - PE (or by PC, the proportion of correct responses). So, for a given participant the mean (or median) RT of the correct responses in a particular condition is calculated and divided by (1-PE) or by PC. Since RTs are expressed in ms and divided by proportions, IES is expressed in ms as well. For instance, if a participant in a particular condition responds with an average RT of 652 ms and makes 5% errors, then IES = 652/(1-.05) = 652/.95 = 686 ms.</p>
+</div></blockquote>
+<p>Print all the relevant measures to the screen in one line of text, as in the example below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">average</span> <span class="n">reaction</span> <span class="n">time</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">ms</span> <span class="p">(</span><span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">2000</span> <span class="n">ms</span><span class="p">):</span> <span class="mi">652</span>
+<span class="n">Enter</span> <span class="n">average</span> <span class="n">accuracy</span> <span class="n">score</span> <span class="k">as</span> <span class="n">proportion</span> <span class="p">(</span><span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span><span class="p">):</span> <span class="mf">.9449</span>
+<span class="n">When</span> <span class="n">combining</span> <span class="n">an</span> <span class="n">RT</span> <span class="n">of</span> <span class="mi">652</span> <span class="n">ms</span> <span class="ow">and</span> <span class="n">an</span> <span class="n">ACC</span> <span class="n">of</span> <span class="mf">0.9449</span> <span class="p">(</span><span class="o">=</span> <span class="mf">5.51</span><span class="o">%</span> <span class="n">errors</span><span class="p">),</span> <span class="n">the</span> <span class="n">IES</span> <span class="n">score</span> <span class="ow">is</span> <span class="mi">690</span> <span class="n">ms</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-7-saving-and-loading-the-jupyter-notebook">
+<h2>Exercise 7. Saving and loading the jupyter notebook<a class="headerlink" href="#exercise-7-saving-and-loading-the-jupyter-notebook" title="Permalink to this heading">#</a></h2>
+<p>Now, save your work and store the .ipynb file in a designated folder. Close this window, and re-open the Google colab. Reload your work. Is everything still there?</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
+<p>Bruyer, R., &amp; Brysbaert, M. (2011). Combining speed and accuracy in cognitive psychology: Is the inverse efficiency score (IES) a better dependent variable than the mean reaction time (RT) and the percentage of errors (PE)?. <em>Psychologica Belgica</em>, <em>51</em>(1), 5-13.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\02_variables"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python exercises: Variables</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-print-welcome-text">Exercise 1. Print welcome text</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-compute-gross-pay">Exercise 2. Compute gross pay</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-numeric-calculations">Exercise 3. Numeric calculations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-convert-temperature">Exercise 4. Convert temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-convert-reaction-time">Exercise 5. Convert reaction time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-combine-reaction-time-and-accuracy-information">Exercise 6. Combine reaction time and accuracy information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-saving-and-loading-the-jupyter-notebook">Exercise 7. Saving and loading the jupyter notebook</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jeshua Tromp & Henk van Steenbergen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Leiden University; Attribution: Jeshua Tromp &amp; Henk van Steenbergen, Leiden University, with CC BY-NC-SA 2.0 license.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
