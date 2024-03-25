@@ -257,6 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
 </ul>
 
     </div>
@@ -566,7 +567,7 @@ document.write(`
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>In this tutorial we are going to show how you can administer long questionnaires in OpenSesame. The example is similar to a solution in E-Prime that can be downloaded <a class="reference external" href="https://www.henkvansteenbergen.com/open-science#Questionnaire">here</a>.</p>
 <p>Assume you want to present the <a class="reference external" href="https://ipip.ori.org/new_ipip-50-item-scale.htm">50-item long International Personality Item Pool</a>, embedded in an OpenSesame experiment.</p>
-<p>One option is to create customs forms in OpenSesame as explained <a class="reference external" href="https://osdoc.cogsci.nl/manual/forms/about/">here</a>. In this tutorial we use Canvas functions instead. Below we show step-by-step how you can create a fully customizable and quite flexible questionnaire. This tutorial also allows you to apply a lot of coding knowledge you obtained earlier! Let’s start!</p>
+<p>One option is to create customs forms in OpenSesame as explained <a class="reference external" href="https://osdoc.cogsci.nl/3.3/manual/forms/about/">here</a>. In this tutorial we use Canvas functions instead. Below we show step-by-step how you can create a fully customizable and quite flexible questionnaire. This tutorial also allows you to apply a lot of coding knowledge you obtained earlier! Let’s start!</p>
 </section>
 <section id="step-1-sketch-the-basic-outline-of-your-questionnaire">
 <h2>Step 1. Sketch the basic outline of your questionnaire<a class="headerlink" href="#step-1-sketch-the-basic-outline-of-your-questionnaire" title="Permalink to this heading">#</a></h2>
@@ -5377,7 +5378,7 @@ if (typeof version == 'undefined') {
 </section>
 <section id="check-what-was-clicked">
 <h3>Check what was clicked<a class="headerlink" href="#check-what-was-clicked" title="Permalink to this heading">#</a></h3>
-<p>To check whether something was clicked at we need the <code class="docutils literal notranslate"><span class="pre">elements_at(x,y)</span></code> function of the Canvas object (learn more <a class="reference external" href="https://osdoc.cogsci.nl/manual/python/canvas/#Canvas-elements_at">here</a>).</p>
+<p>To check whether something was clicked at we need the <code class="docutils literal notranslate"><span class="pre">elements_at(x,y)</span></code> function of the Canvas object (learn more <a class="reference external" href="https://osdoc.cogsci.nl/3.3/manual/python/canvas/#Canvas-elements_at">here</a>).</p>
 <p>This function returns a list of object names that are ‘below’ a particular (x,y) coordinate in the respective Canvas.</p>
 <p>So if we use the x and y position of the mouse at the moment the user clicked, we can ask elements_at to provide the names of the objects (if any) that were below the mouse cursor.</p>
 <p>Let’s try whether this works. Add the following code below the wait for mouse click code.</p>
